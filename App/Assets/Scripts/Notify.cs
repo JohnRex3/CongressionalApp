@@ -22,10 +22,24 @@ public class Notify : MonoBehaviour
         };
         AndroidNotificationCenter.RegisterNotificationChannel(c);
 
+        //Johnathon's Edit: adding public strings for each type of exercise, to be called by notification.Text
+        
+            string exercise1 = "Pushups";
+            string exercise2 = "Squats";
+            string exercise3 = "Lunges";
+            string exercise4 = "Planks";
+            string exercise5 = "Stair Steps";
+            string exercise6 = "Burpees";
+            string exercise7 = "Wall Sits";
+            string exercise8 = "Crunches";
+            string exercise9 = "Bicycle Kicks";
+        
+
         //Setup The Notification that is going to be sent
         var notification = new AndroidNotification();
-        notification.Title = "SomeTitle";
-        notification.Text = "SomeText";
+        //Johnathon's Edit: Notification Title will say "Here's an exercise for you:"
+        notification.Title = "Here's an exercise for you:";
+        notification.Text = "Pushups"; //WIP
         notification.FireTime = System.DateTime.Now.AddMinutes(5);
         
         //Send the Notification
