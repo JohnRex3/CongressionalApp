@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Notify : MonoBehaviour
 {
+    string[] exercises = new string[9];
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,15 +26,21 @@ public class Notify : MonoBehaviour
 
         //Johnathon's Edit: adding public strings for each type of exercise, to be called by notification.Text
 
-        string[] exercises;
-        string s = "Pushups,Squats,Lunges,Planks,Stair Steps,Burpees,Wall Sits,Crunches,Bicycle Kicks";
-        exercises = s.Split(',');
+        exercises[0] = "Pushups";
+        exercises[1] = "Squats";
+        exercises[2] = "Lunges";
+        exercises[3] = "Planks";
+        exercises[4] = "Stair Steps";
+        exercises[5] = "Burpees";
+        exercises[6] = "Wall Sits";
+        exercises[7] = "Crunches";
+        exercises[8] = "Bicycle Kicks";
 
         //Setup The Notification that is going to be sent
         var notification = new AndroidNotification();
         //Johnathon's Edit: Notification Title will say "Here's an exercise for you:"
         notification.Title = "Here's an exercise for you:";
-        notification.Text = exercises; //WIP
+        notification.Text = ""; //ref string names in "exercises"
         notification.FireTime = System.DateTime.Now.AddMinutes(5);
         
         //Send the Notification
