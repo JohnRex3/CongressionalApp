@@ -6,6 +6,7 @@ using UnityEngine;
 public class Notify : MonoBehaviour
 {
     string[] exercises = new string[9];
+     
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +41,7 @@ public class Notify : MonoBehaviour
         var notification = new AndroidNotification();
         //Johnathon's Edit: Notification Title will say "Here's an exercise for you:"
         notification.Title = "Here's an exercise for you:";
-        notification.Text = ""; //ref string names in "exercises"
+        notification.Text = "<InsertExercise>"; //ref string names in "exercises" //GetComponent<ExerciseArray1.string Etext>;
         notification.FireTime = System.DateTime.Now.AddMinutes(5);
         
         //Send the Notification
