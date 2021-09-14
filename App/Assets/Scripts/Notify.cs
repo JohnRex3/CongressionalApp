@@ -39,7 +39,7 @@ public class Notify : MonoBehaviour
         var notification = new AndroidNotification();
         //Johnathon's Edit: Notification Title will say "Here's an exercise for you:"
         notification.Title = "Here's an exercise for you:";
-        notification.Text = "Pushups"; //WIP
+        notification.Text = "Go for a short walk"; //WIP
         notification.FireTime = System.DateTime.Now.AddMinutes(5);
         
         //Send the Notification
