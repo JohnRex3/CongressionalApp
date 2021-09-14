@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Notify : MonoBehaviour
 {
+    string[] exercises = new string[9];
+     
+
     // Start is called before the first frame update
     void Start()
     {
@@ -12,7 +15,7 @@ public class Notify : MonoBehaviour
         //Remove Notifications that have already been displayed 
         AndroidNotificationCenter.CancelAllDisplayedNotifications();
 
-       //set up Android Notification channel to send messages 
+        //set up Android Notification channel to send messages 
         var c = new AndroidNotificationChannel()
         {
             Id = "channel_id",
@@ -23,23 +26,26 @@ public class Notify : MonoBehaviour
         AndroidNotificationCenter.RegisterNotificationChannel(c);
 
         //Johnathon's Edit: adding public strings for each type of exercise, to be called by notification.Text
-        
-            string exercise1 = "Pushups";
-            string exercise2 = "Squats";
-            string exercise3 = "Lunges";
-            string exercise4 = "Planks";
-            string exercise5 = "Stair Steps";
-            string exercise6 = "Burpees";
-            string exercise7 = "Wall Sits";
-            string exercise8 = "Crunches";
-            string exercise9 = "Bicycle Kicks";
-        
+
+        exercises[0] = "Pushups";
+        exercises[1] = "Squats";
+        exercises[2] = "Lunges";
+        exercises[3] = "Planks";
+        exercises[4] = "Stair Steps";
+        exercises[5] = "Burpees";
+        exercises[6] = "Wall Sits";
+        exercises[7] = "Crunches";
+        exercises[8] = "Bicycle Kicks";
 
         //Setup The Notification that is going to be sent
         var notification = new AndroidNotification();
         //Johnathon's Edit: Notification Title will say "Here's an exercise for you:"
         notification.Title = "Here's an exercise for you:";
+<<<<<<< HEAD
         notification.Text = "Go for a short walk"; //WIP
+=======
+        notification.Text = "<InsertExercise>"; //ref string names in "exercises" //GetComponent<ExerciseArray1.string Etext>;
+>>>>>>> e88034984218f02324aa608e3ec056b7bcb8f4d3
         notification.FireTime = System.DateTime.Now.AddMinutes(5);
         
         //Send the Notification
