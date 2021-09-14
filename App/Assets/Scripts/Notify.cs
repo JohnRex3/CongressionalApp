@@ -44,6 +44,8 @@ public class Notify : MonoBehaviour
         //Wills Edit: Potential solution to work with Notifs.
         ExerciseArray1 EA = gameObject.GetComponent<ExerciseArray1>();
         notification.Text = EA.Notif(); //ref string names in "exercises" //GetComponent<ExerciseArray1.string Etext>;
+        notification.Text = "Go for a short walk"; //WIP
+        notification.Text = "<InsertExercise>"; //ref string names in "exercises" //GetComponent<ExerciseArray1.string Etext>;
         notification.FireTime = System.DateTime.Now.AddMinutes(5);
         
         //Send the Notification
