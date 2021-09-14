@@ -5,15 +5,19 @@ using UnityEngine.UI;
 
 public class ExerciseArray1 : MonoBehaviour
 {
+    
     // Will's Edit: made an array for calisthenic exercises.
     public string[] exercisesCalisthenics = new string[] { "Pushups", "Squats", "Lunges", "Planks", "Stair Steps", "Burpees", "Wall Sits", "Crunches/ Situps", "Bicycle Kicks" };
     Text ExerciseText;
     // Start is called before the first frame update
     void Start()
     {
+        
         //Will's Edit: calling for text exercise text
         ExerciseText = GameObject.Find("ExerciseText").GetComponent<Text>();
         string Etext = exercisesCalisthenics[Random.Range(0, exercisesCalisthenics.Length)];
+        int Amount = Random.Range(10, 35);
+        //amount = Amount.ToString;
         ExerciseText.text = Etext;
 
     }
