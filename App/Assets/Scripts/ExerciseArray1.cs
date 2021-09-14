@@ -23,6 +23,12 @@ public class ExerciseArray1 : MonoBehaviour
         ExerciseText.text = Etext;
         //Debug.Log("testing testing");
     }
+     public string Notif()
+    {
+        string Etext = exercisesCalisthenics[Random.Range(0, exercisesCalisthenics.Length)];
+        ExerciseText.text = Etext;
+        return Etext;
+    }
 }
 
 //string exercise1 = "Pushups";

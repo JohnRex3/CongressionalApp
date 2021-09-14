@@ -42,8 +42,16 @@ public class Notify : MonoBehaviour
         //Johnathon's Edit: Notification Title will say "Here's an exercise for you:"
         notification.Title = "Here's an exercise for you:";
 
+
         notification.Text = "Go for a short walk"; //WIP
 
+        notification.Text = "<InsertExercise>"; //ref string names in "exercises" //GetComponent<ExerciseArray1.string Etext>;
+
+
+        //Wills Edit: Potential solution to work with Notifs.
+        ExerciseArray1 EA = gameObject.GetComponent<ExerciseArray1>();
+        notification.Text = EA.Notif(); //ref string names in "exercises" //GetComponent<ExerciseArray1.string Etext>;
+        notification.Text = "Go for a short walk"; //WIP
         notification.Text = "<InsertExercise>"; //ref string names in "exercises" //GetComponent<ExerciseArray1.string Etext>;
 
         notification.FireTime = System.DateTime.Now.AddMinutes(5);
