@@ -16,11 +16,7 @@ public class ExerciseArray1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        
-        //Will's Edit: calling for text exercise text
-        ExerciseText = GameObject.Find("ExerciseText").GetComponent<Text>();
-
+        //Will's Edit: Removed reduntant code.
         //Wills Edit: Declaring button existence and which button it is calling
         Button btn = ExerciseGen.GetComponent<Button>();
         btn.onClick.AddListener(OnClick);
