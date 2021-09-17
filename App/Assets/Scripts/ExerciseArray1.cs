@@ -1,5 +1,5 @@
+using System;
 using System.Collections;
-using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -30,24 +30,29 @@ public class ExerciseArray1 : MonoBehaviour
         //Will's Edit: Conditional statement that will work with settings to check which excercise list will be selected.
         if (exerciseCalisthenicsSetting == true && exerciseDumbellsSetting == false)
         {
-             Etext = exercisesCalisthenics[Random.Range(0, exercisesCalisthenics.Length)];
+             Etext = exercisesCalisthenics[UnityEngine.Random.Range(0, exercisesCalisthenics.Length)];
         }
         else if (exerciseCalisthenicsSetting == false && exerciseDumbellsSetting == true)
         {
-             Etext = exercisesDumbells[Random.Range(0, exercisesDumbells.Length)];
+             Etext = exercisesDumbells[UnityEngine.Random.Range(0, exercisesDumbells.Length)];
         }
         else if (exerciseCalisthenicsSetting == true && exerciseDumbellsSetting == true)
         {
-            //exerciseCalisthenicsDumbells = exercisesCalisthenics.Concat<>(exercisesDumbells); // needs more research done to add 2 scripts together
+            //Will's Edit: Adds 2 arrays together, makes it so that if the 1st or 2nd arrays change that this 3rd array is not baked in.
+            exerciseCalisthenicsDumbells = new string[exercisesCalisthenics.Length + exercisesDumbells.Length]; 
+            Array.Copy(exercisesCalisthenics, exerciseCalisthenicsDumbells, exercisesCalisthenics.Length);
+            Array.Copy(exercisesDumbells, 0, exerciseCalisthenicsDumbells, exercisesCalisthenics.Length, exercisesDumbells.Length);
+            //Debug.Log(exerciseCalisthenicsDumbells); // unusable code
+            Etext = exerciseCalisthenicsDumbells[UnityEngine.Random.Range(0, exerciseCalisthenicsDumbells.Length)];
         }
-        int Amount = Random.Range(10, 35);
+        int Amount = UnityEngine.Random.Range(10, 35);
         //amount = Amount.ToString;
         ExerciseText.text = Etext;
         //Debug.Log("testing testing");
     }
      public string Notif()
     {
-        string Etext = exercisesCalisthenics[Random.Range(0, exercisesCalisthenics.Length)];
+        string Etext = exercisesCalisthenics[UnityEngine.Random.Range(0, exercisesCalisthenics.Length)];
         ExerciseText.text = Etext;
         return Etext;
     }
