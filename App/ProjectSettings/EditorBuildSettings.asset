@@ -17,6 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Home.unity
     guid: deca909531942184bb229ae2711f5ea8
+
   - enabled: 1
     path: Assets/Scenes/Exercise.unity
     guid: 85a2ae396704eec459d6e58cae80b271
