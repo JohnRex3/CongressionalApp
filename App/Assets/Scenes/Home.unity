@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 217463623}
   - component: {fileID: 217463622}
   m_Layer: 5
-  m_Name: Exercise Text
+  m_Name: ExerciseText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 138}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 116.96185}
+  m_SizeDelta: {x: 180, y: 72.0763}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &217463622
 MonoBehaviour:
@@ -791,19 +791,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1097856910}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11500000, guid: 9fdd195af663bc94091b79e9550060e1, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: DisplayText
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1097856910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -865,7 +853,17 @@ MonoBehaviour:
   - Wall Sits
   - Crunches/ Situps
   - Bicycle Kicks
+  exercisesDumbells:
+  - Bicep Curls
+  - Hammer Curls
+  - Shrugs
+  - Lawnmowers
+  - Arnold/ Chest Presses
+  - Lateral Presses
+  - Shoulder Presses
   ExerciseText: {fileID: 217463622}
+  exerciseCalisthenicsSetting: 1
+  exerciseDumbellsSetting: 1
 --- !u!1 &1344551341
 GameObject:
   m_ObjectHideFlags: 0
