@@ -6,33 +6,47 @@ using TMPro;
 
 public class EditAlarm : MonoBehaviour
 {
+    public TMPro.TMP_Text words;
+
     public Button Switch;
     bool on = true;
-    //private GameObject On;
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        //On = GameObject.Find("On");
         
-        Button btn = Switch.GetComponent<Button>();
-        btn.onClick.AddListener(swap);
+
+        //Button btn = Switch.GetComponent<Button>();
+        //btn.onClick.AddListener(swap);
     }
 
     // Update is called once per frame
     void Update()
     {
-        TextMeshPro textmeshPro = GetComponent<TextMeshPro>();
+        var mybutton = Switch;
         if (on == true)
         {
-            //On.GetComponent<TextMeshPro>().text = "On";
-            textmeshPro.SetText("On");
-            //print("On");
+            Color gr = new Color(0f, 1f, 0f, 1f);
+            words.text = "On";
+            ColorBlock col = Switch.colors;
+            col.normalColor = gr;
+            col.highlightedColor = gr;
+            col.pressedColor = gr;
+            col.selectedColor = gr;
+            Switch.colors = col;
         }
         else
         {
-            //On.GetComponentInChildren<TextMeshPro>().text = "Off";
-            //print("Off");
+            Color gr = new Color(1f, 0f, 0f, 1f);
+            words.text = "Off";
+            ColorBlock col = Switch.colors;
+            col.normalColor = gr;
+            col.highlightedColor = gr;
+            col.pressedColor = gr;
+            col.selectedColor = gr;
+            Switch.colors = col;
         }
     }
 
