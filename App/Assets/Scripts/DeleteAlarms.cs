@@ -16,31 +16,31 @@ public class DeleteAlarms : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject[] alarm = GameObject.FindGameObjectsWithTag("Alarm");
+        //GameObject Alarm = GameObject.FindGameObjectWithTag("Alarm");
         //if(Input.touchCount > 0 || Input.GetMouseButtonDown(0))
-        //{
-        //    Debug.Log("tap");
-        //    delAlarm();
-        //}
-        
+
+        Vector3 origin = Vector3.forward * -10;
+        RaycastHit hit;
+        Ray kill = new Ray(origin, Vector3.forward);
+        Debug.DrawRay(origin, Vector3.forward);
 
         if (delete == true)
         {
-            if(Input.touchCount > 0 || Input.GetMouseButtonDown(0))
+            if(Physics.Raycast(kill, out hit, 100))
             {
-                Debug.Log("touch");
-                Destroy(alarm);
+                if(hit.collider.tag == "Alarm")
+                {
+                    Debug.Log("hit");
+                    Destroy(hit.collider.gameObject);
+                }
+                    
+                
             }
         }
         else
         {
 
         }
-    }
-
-    private void Destroy(GameObject[] alarm)
-    {
-        throw new NotImplementedException();
     }
 
     public void delAlarm()

@@ -79,9 +79,9 @@ public class NewAlarms : MonoBehaviour
         var d = c / 19.04762f;
         //var y = 140 - b;
         var y = b - c;
-        print(a);
-        print(b);
-        print(c);
+        //print(a);
+        //print(b);
+        //print(c);
         GameObject alarm = Instantiate(Alarm, transform.position = new Vector3(0, b - d, 0), Quaternion.identity);
         alarm.transform.SetParent(Canvas.transform);
         alarm.transform.localScale = new Vector3(50, 50, 1);
