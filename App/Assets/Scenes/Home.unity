@@ -505,7 +505,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462094106}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd6c025ec53354949b6d252e0ebc3105, type: 3}
   m_Name: 
@@ -614,6 +614,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462094106}
   m_CullTransparentMesh: 1
+--- !u!1 &1745317844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1745317846}
+  - component: {fileID: 1745317845}
+  m_Layer: 0
+  m_Name: Info Carrier
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1745317845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745317844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd6c025ec53354949b6d252e0ebc3105, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExerciseGen: {fileID: 1462094109}
+  exercisesCalisthenics:
+  - Pushups
+  - Squats
+  - Lunges
+  - Planks
+  - Stair Steps
+  - Burpees
+  - Wall Sits
+  - Crunches/ Situps
+  - Bicycle Kicks
+  exercisesDumbells:
+  - Bicep Curls
+  - Hammer Curls
+  - Shrugs
+  - Lawnmowers
+  - Arnold/ Chest Presses
+  - Lateral Presses
+  - Shoulder Presses
+  ExerciseText: {fileID: 686116991}
+  exerciseCalisthenicsSetting: 0
+  exerciseDumbellsSetting: 0
+--- !u!4 &1745317846
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745317844}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 100.23445, y: 186.7886, z: -86.045586}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1745580617
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,6 +773,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1413581856}
     m_Modifications:
+    - target: {fileID: 720024675027789254, guid: 6034ca7d1b780fc4194952a7eb8fcc15, type: 3}
+      propertyPath: Info
+      value: 
+      objectReference: {fileID: 1745317844}
     - target: {fileID: 720024675027789255, guid: 6034ca7d1b780fc4194952a7eb8fcc15, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
