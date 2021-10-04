@@ -8,6 +8,7 @@ public class Click : MonoBehaviour
     public GameObject Info;
     public void LoadScene(string sceneName)
     {
+        //will's edit; hopefully this works
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         DontDestroyOnLoad(Info);
         SceneManager.LoadScene(sceneName);

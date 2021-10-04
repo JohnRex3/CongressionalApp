@@ -11,6 +11,7 @@ public class Settings1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //need to work on some stuff
         CalBtn = gameObject.GetComponent<Button>();
         CalBtn.onClick.AddListener(delegate { Toggle(); });
     }
