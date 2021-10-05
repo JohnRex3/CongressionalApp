@@ -5,7 +5,7 @@ using UnityEditor.Events;
 using UnityEditor;
 using UnityEngine.Events;
 using UnityEngine.UI;
-
+//scrapping this script to use Settings1.cs
 
 public class Settings : MonoBehaviour
 {
