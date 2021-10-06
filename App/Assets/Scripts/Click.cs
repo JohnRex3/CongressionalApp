@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Click : MonoBehaviour
 {
+
+    private void Awake()
+    {
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("Saved");
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     public void LoadScene(string sceneName)
     {
 

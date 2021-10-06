@@ -26,16 +26,18 @@ public class DeleteAlarms : MonoBehaviour
 
         if (delete == true)
         {
-            if(Physics.Raycast(kill, out hit, 100))
+            //Debug.Log("delete");
+            Physics.Raycast(kill, out hit, 100);
+            
+            Debug.Log(hit);
+            if(hit.collider.gameObject.tag == "Alarm")
             {
-                if(hit.collider.tag == "Alarm")
-                {
-                    Debug.Log("hit");
-                    Destroy(hit.collider.gameObject);
-                }
+                Debug.Log(tag);
+                Destroy(hit.collider.gameObject);
+            }
                     
                 
-            }
+            
         }
         else
         {
