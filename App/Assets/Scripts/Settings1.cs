@@ -15,7 +15,7 @@ public class Settings1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //will's edit:
+        //will's edit: merge error fix
        
         SetBtn = gameObject.GetComponent<Button>();
         btnPressed = SetBtn.gameObject;
