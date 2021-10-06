@@ -5,24 +5,31 @@ using UnityEngine.UI;
 
 public class Settings1 : MonoBehaviour
 {
-    private ExerciseArray1 ArrayGetter;
-    public Button CalBtn;
-
+    //will's edit: trying to use a static variable not set to an instance of an object. this should hopefully make it a bit easier instead of dont destroyonload();
+    public Button SetBtn;
+    public static bool SettingsBoolCal;
+    public static bool SettingsBoolDum;
+    public GameObject btnPressed;
+    public string btnPressedCal;
+    public string btnPressedDum;
     // Start is called before the first frame update
     void Start()
     {
-        //need to work on some stuff
-        CalBtn = gameObject.GetComponent<Button>();
-        CalBtn.onClick.AddListener(delegate { Toggle(); });
+        //will's edit:
+       
+        SetBtn = gameObject.GetComponent<Button>();
+        btnPressed = SetBtn.gameObject;
+        SetBtn.onClick.AddListener(delegate { Toggle(btnPressed); });
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Toggle(GameObject btnPressedProp)
     {
-        
-    }
-    public void Toggle()
-    {
-
+        if(btnPressedProp.name == btnPressedCal )
+        {
+            SettingsBoolCal = !SettingsBoolCal;
+        }else if (btnPressedProp.name == btnPressedCal)
+        {
+            SettingsBoolDum = !SettingsBoolDum;
+        }
     }
 }
