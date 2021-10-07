@@ -686,7 +686,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Open Settings to Use
 --- !u!222 &2132907013
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -929,7 +929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2957885799905680648, guid: 6f84ba9d005dfec4c9a454ad77848a3b, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2957885799905680648, guid: 6f84ba9d005dfec4c9a454ad77848a3b, type: 3}
       propertyPath: m_LocalScale.x
@@ -945,11 +945,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2957885799905680648, guid: 6f84ba9d005dfec4c9a454ad77848a3b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 264.2
+      value: 221
       objectReference: {fileID: 0}
     - target: {fileID: 2957885799905680648, guid: 6f84ba9d005dfec4c9a454ad77848a3b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2957885799905680648, guid: 6f84ba9d005dfec4c9a454ad77848a3b, type: 3}
       propertyPath: m_LocalRotation.w

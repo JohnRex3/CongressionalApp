@@ -1602,6 +1602,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1728240768}
   - component: {fileID: 1728240769}
+  - component: {fileID: 1728240770}
   m_Layer: 5
   m_Name: DifficultySlider
   m_TagString: Untagged
@@ -1682,6 +1683,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1728240770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728240767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c1869b7dfa6fe743a365bb5c8b8a4e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diff: 1
+  difficulty: {fileID: 1728240769}
 --- !u!1 &1976130641
 GameObject:
   m_ObjectHideFlags: 0
