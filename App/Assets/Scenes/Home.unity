@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 393398862}
   - component: {fileID: 393398863}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Exercise Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,14 +153,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2132907014}
   m_Father: {fileID: 1413581856}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.15403, y: 15.4056}
-  m_SizeDelta: {x: 160, y: 102.5385}
+  m_AnchoredPosition: {x: 0.0004920999, y: 39.11492}
+  m_SizeDelta: {x: 198, y: 149.9572}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &393398860
 MonoBehaviour:
@@ -243,7 +244,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 393398860}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 393398863}
+        m_TargetAssemblyTypeName: ExerciseArray1, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &393398863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,7 +539,6 @@ RectTransform:
   m_Children:
   - {fileID: 1872207880}
   - {fileID: 492205254}
-  - {fileID: 2132907014}
   - {fileID: 393398859}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -635,7 +647,7 @@ GameObject:
   - component: {fileID: 2132907013}
   - component: {fileID: 2132907012}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Exercise Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -668,7 +680,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 200
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -690,17 +702,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132907011}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1413581856}
-  m_RootOrder: 2
+  m_Father: {fileID: 393398859}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -81.8}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 1.2344, y: -96.666756}
+  m_SizeDelta: {x: 170.7769, y: 46.1655}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &720024676614243791
 PrefabInstance:

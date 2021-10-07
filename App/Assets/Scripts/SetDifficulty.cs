@@ -5,32 +5,32 @@ using UnityEngine.UI;
 
 public class SetDifficulty : MonoBehaviour
 {
-    public int diff = 1;
-    public int num = 0;
+    public int diff;
     public Slider difficulty;
 
     void Start()
     {
-        difficulty.value = PlayerPrefs.GetInt("MasterDifficulty", 1);
+        //difficulty.value = PlayerPrefs.GetInt("MasterDifficulty");
        
     }
 
-    public void SetLevel(float sliderValue)
+    public void Update()
     {
-        PlayerPrefs.SetFloat("MasterDifficulty", sliderValue);
+        //PlayerPrefs.GetInt("MasterDifficulty", sliderValue);
         diff = (int)difficulty.value;
+        //Debug.Log("hi");
 
-        if(diff == 1)
+        if (diff == 1)
         {
-            
+            //Debug.Log("1");
         }
         else if(diff == 2)
         {
-
+            //Debug.Log("2");
         }
         else if(diff == 3)
         {
-
+            //Debug.Log("3");
         }
 
     }

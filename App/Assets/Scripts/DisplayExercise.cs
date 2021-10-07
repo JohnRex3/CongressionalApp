@@ -16,6 +16,7 @@ public class DisplayExercise : MonoBehaviour
     void Start()
     {
           displayText.text = "";
+        Debug.Log("DisplayExercise.cs");
     }
 
     // Update is called once per frame

@@ -28,6 +28,22 @@ public class ExerciseArray1 : MonoBehaviour
     }
     public void OnClick()
     {
+        //Seth's Edit: adding imput from difficulty slider
+        var MyScript = GameObject.Find("DifficultySlider").GetComponent<SetDifficulty>();
+
+        if (MyScript.diff == 1)
+        {
+            a = UnityEngine.Random.Range(10, 25);
+        }
+        else if (MyScript.diff == 2)
+        {
+            a = UnityEngine.Random.Range(20, 50);
+        }
+        else if (MyScript.diff == 3)
+        {
+            a = UnityEngine.Random.Range(40, 100);
+        }
+
         //Will's Edit: generating random exercise
         //Will's Edit: Conditional statement that will work with settings to check which excercise list will be selected.
         if (exerciseCalisthenicsSetting == true && exerciseDumbellsSetting == false)
@@ -49,31 +65,17 @@ public class ExerciseArray1 : MonoBehaviour
         }
         //int Amount = UnityEngine.Random.Range(10, 35);
         //amount = Amount.ToString;
-        ExerciseText.text = Etext;
+        ExerciseText.text = a + " " + Etext;
     }
     public string Notif()
     {
-        //Seth's Edit: adding imput from difficulty slider
-        var MyScript = GameObject.Find("DifficultySlider").GetComponent<SetDifficulty>();
-
-        if (MyScript.diff == 1)
-        {
-            a = UnityEngine.Random.Range(10, 25);
-        }
-        else if (MyScript.diff == 2)
-        {
-            a = UnityEngine.Random.Range(20, 50);
-        }
-        else if (MyScript.diff == 3)
-        {
-            a = UnityEngine.Random.Range(40, 100);
-        }
+        
 
         
 
         string Etext = exercisesCalisthenics[UnityEngine.Random.Range(0, exercisesCalisthenics.Length)];
         ExerciseText.text = Etext;
-        return a + Etext;
+        return Etext;
         //Debug.Log(a);
     }
 }
