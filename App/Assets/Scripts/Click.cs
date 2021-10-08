@@ -13,7 +13,7 @@ public class Click : MonoBehaviour
     }
     public void LoadScene(string sceneName)
     {
-        
+        float vol = PlayerPrefs.GetFloat("MasterVolume");
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(sceneName);
     }

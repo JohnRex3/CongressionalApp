@@ -29,17 +29,20 @@ public class ExerciseArray1 : MonoBehaviour
     public void OnClick()
     {
         //Seth's Edit: adding imput from difficulty slider
-        var MyScript = GameObject.Find("DifficultySlider").GetComponent<SetDifficulty>();
+        //var MyScript = GameObject.Find("DifficultySlider").GetComponent<SetDifficulty>();
+        int diff = PlayerPrefs.GetInt("Diff");
 
-        if (MyScript.diff == 1)
+        //MyScript.diff == 1 || 
+
+        if (diff == 1)
         {
             a = UnityEngine.Random.Range(10, 25);
         }
-        else if (MyScript.diff == 2)
+        else if (diff == 2)
         {
             a = UnityEngine.Random.Range(20, 50);
         }
-        else if (MyScript.diff == 3)
+        else if (diff == 3)
         {
             a = UnityEngine.Random.Range(40, 100);
         }

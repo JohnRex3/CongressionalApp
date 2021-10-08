@@ -12,12 +12,12 @@ public class SetVolume : MonoBehaviour
 
     public void Start()
     {
-        volume.value = PlayerPrefs.GetFloat("MasterVolume", 0.75f);
+        volume.value = PlayerPrefs.GetFloat("MasterVolume");
     }
 
     public void SetLevel (float sliderValue)
     {
-        mixer.SetFloat("MasterVol", Mathf.Log10(sliderValue) * 20);
+        //mixer.SetFloat("MasterVol", Mathf.Log10(sliderValue) * 20);
         PlayerPrefs.SetFloat("MasterVolume", sliderValue);
     }
 }
