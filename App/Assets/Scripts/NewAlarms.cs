@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +16,7 @@ public class NewAlarms : MonoBehaviour
     public Button RemoveAlarm;
     public Button Done;
     //public GameObject Alarm;
+    public Canvas canvas;
 
     private Canvas CanvasObject1;
     private Canvas CanvasObject2;
@@ -22,7 +24,7 @@ public class NewAlarms : MonoBehaviour
     bool add = true;
     int a;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         
@@ -50,8 +52,7 @@ public class NewAlarms : MonoBehaviour
         GameObject[] alarm = GameObject.FindGameObjectsWithTag("Alarm");
         int alarmCount = alarm.Length;
         a = alarmCount;
-        //print(alarm.Length + a);
-        //print(a);
+        
 
         if(add == true)
         {
@@ -63,8 +64,7 @@ public class NewAlarms : MonoBehaviour
             CanvasObject1.enabled = false;
             CanvasObject2.enabled = true;
         }
-
-        //if(Input.)
+        
     }
 
     public void OnClick()
@@ -74,19 +74,15 @@ public class NewAlarms : MonoBehaviour
 
     public void CreateAlarm()
     {
-        var b = 140 / 19.04762f;
-        var c = 73 * a;
-        var d = c / 19.04762f;
-        //var y = 140 - b;
-        var y = b - c;
-        print(a);
-        print(b);
-        print(c);
-        GameObject alarm = Instantiate(Alarm, transform.position = new Vector3(0, b - d, 0), Quaternion.identity);
-        alarm.transform.SetParent(Canvas.transform);
-        alarm.transform.localScale = new Vector3(50, 50, 1);
-        //alarm.transform.position = new Vector3(0,1,0);
-    }
+        GameObject currentObject;
+        int currentIndex = 0;
+        GameObject alarm = Instantiate(Alarm, transform.position = new Vector3(0, -73, 0), Quaternion.identity);
+        alarm.transform.SetParent(canvas.transform);
+        GameObject[] alarms = new GameObject[20];
+        currentObject = Instantiate(alarms[currentIndex]);
+        currentIndex ++;
 
+        //alarms[0] = alarm;
+    }
     
 }

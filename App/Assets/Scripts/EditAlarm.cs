@@ -6,7 +6,7 @@ using TMPro;
 
 public class EditAlarm : MonoBehaviour
 {
-    public TMPro.TMP_Text words;
+    public TMP_Text words;
 
     public Button Switch;
     bool on = true;
@@ -37,7 +37,7 @@ public class EditAlarm : MonoBehaviour
             col.selectedColor = gr;
             Switch.colors = col;
         }
-        else
+        else if(on == false)
         {
             Color gr = new Color(1f, 0f, 0f, 1f);
             words.text = "Off";
