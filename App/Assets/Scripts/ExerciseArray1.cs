@@ -49,15 +49,15 @@ public class ExerciseArray1 : MonoBehaviour
 
         //Will's Edit: generating random exercise
         //Will's Edit: Conditional statement that will work with settings to check which excercise list will be selected.
-        if (exerciseCalisthenicsSetting == true && exerciseDumbellsSetting == false)
+        if (PlayerPrefs.GetString("CBool") == "true" && PlayerPrefs.GetString("DBool") == "false" )//exerciseCalisthenicsSetting == true && exerciseDumbellsSetting == false
         {
              Etext = exercisesCalisthenics[UnityEngine.Random.Range(0, exercisesCalisthenics.Length)];
         }
-        else if (exerciseCalisthenicsSetting == false && exerciseDumbellsSetting == true)
+        else if (PlayerPrefs.GetString("CBool") == "false" && PlayerPrefs.GetString("DBool") == "true")//exerciseCalisthenicsSetting == false && exerciseDumbellsSetting == true)
         {
              Etext = exercisesDumbells[UnityEngine.Random.Range(0, exercisesDumbells.Length)];
         }
-        else if (exerciseCalisthenicsSetting == true && exerciseDumbellsSetting == true)
+        else if (PlayerPrefs.GetString("CBool") == "true" && PlayerPrefs.GetString("DBool") == "true")   // exerciseCalisthenicsSetting == true && exerciseDumbellsSetting == true)
         {
             //Will's Edit: Adds 2 arrays together, makes it so that if the 1st or 2nd arrays change that this 3rd array is not baked in.
             exerciseCalisthenicsDumbells = new string[exercisesCalisthenics.Length + exercisesDumbells.Length]; 
@@ -65,10 +65,13 @@ public class ExerciseArray1 : MonoBehaviour
             Array.Copy(exercisesDumbells, 0, exerciseCalisthenicsDumbells, exercisesCalisthenics.Length, exercisesDumbells.Length);
             //Debug.Log(exerciseCalisthenicsDumbells); // unusable code
             Etext = exerciseCalisthenicsDumbells[UnityEngine.Random.Range(0, exerciseCalisthenicsDumbells.Length)];
+        }else if (PlayerPrefs.GetString("CBool") == "false" && PlayerPrefs.GetString("DBool") == "false")
+        {
+            Etext = "Go to Settings to select Exercises";
         }
-        //int Amount = UnityEngine.Random.Range(10, 35);
-        //amount = Amount.ToString;
-        ExerciseText.text = a + " " + Etext;
+            //int Amount = UnityEngine.Random.Range(10, 35);
+            //amount = Amount.ToString;
+            ExerciseText.text = a + " " + Etext;
     }
     public string Notif()
     {
