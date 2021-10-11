@@ -4,6 +4,6 @@
 									
 - Fix button issues
 
--
+- Improve/add more animations
 
 -
