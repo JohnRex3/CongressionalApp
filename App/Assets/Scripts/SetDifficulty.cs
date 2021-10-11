@@ -11,7 +11,7 @@ public class SetDifficulty : MonoBehaviour
     void Start()
     {
 
-        //difficulty.value = PlayerPrefs.GetInt("MasterDifficulty");
+        difficulty.value = PlayerPrefs.GetInt("Diff");
        
     }
 
