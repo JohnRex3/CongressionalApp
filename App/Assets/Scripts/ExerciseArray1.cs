@@ -72,6 +72,7 @@ public class ExerciseArray1 : MonoBehaviour
             //int Amount = UnityEngine.Random.Range(10, 35);
             //amount = Amount.ToString;
             ExerciseText.text = a + " " + Etext;
+        PlayerPrefs.Save();
     }
     public string Notif()
     {
