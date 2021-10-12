@@ -69,9 +69,10 @@ public class ExerciseArray1 : MonoBehaviour
         {
             Etext = "Go to Settings to select Exercises";
         }
-            //int Amount = UnityEngine.Random.Range(10, 35);
-            //amount = Amount.ToString;
-            ExerciseText.text = a + " " + Etext;
+        //int Amount = UnityEngine.Random.Range(10, 35);
+        //amount = Amount.ToString;
+        //Debug.Log(Etext);
+        ExerciseText.text = a + " " + Etext;
         PlayerPrefs.Save();
     }
     public string Notif()
