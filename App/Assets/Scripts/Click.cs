@@ -6,14 +6,18 @@ using UnityEngine.SceneManagement;
 public class Click : MonoBehaviour
 {
 
+    public AudioSource audioData;
+
     private void Awake()
     {
+        //audioData = GetComponent<AudioSource>();
+        audioData.PlayDelayed(0);
         //GameObject[] objs = GameObject.FindGameObjectsWithTag("Saved");
         //DontDestroyOnLoad(this.gameObject);
     }
     public void LoadScene(string sceneName)
     {
-        float vol = PlayerPrefs.GetFloat("MasterVolume");
+        float audioData = PlayerPrefs.GetFloat("MasterVolume");
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(sceneName);
     }
