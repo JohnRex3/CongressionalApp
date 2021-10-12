@@ -65,12 +65,13 @@ public class ExerciseArray1 : MonoBehaviour
             Array.Copy(exercisesDumbells, 0, exerciseCalisthenicsDumbells, exercisesCalisthenics.Length, exercisesDumbells.Length);
             //Debug.Log(exerciseCalisthenicsDumbells); // unusable code
             Etext = exerciseCalisthenicsDumbells[UnityEngine.Random.Range(0, exerciseCalisthenicsDumbells.Length)];
-        }else if (PlayerPrefs.GetString("CBool") == "false" && PlayerPrefs.GetString("DBool") == "false")
+        }
+        else if (PlayerPrefs.GetString("CBool") == "false" && PlayerPrefs.GetString("DBool") == "false")
         {
             Etext = "Go to Settings to select Exercises";
         }
-            //int Amount = UnityEngine.Random.Range(10, 35);
-            //amount = Amount.ToString;
+        //int Amount = UnityEngine.Random.Range(10, 35);
+        //amount = Amount.ToString;
             ExerciseText.text = a + " " + Etext;
         PlayerPrefs.Save();
     }
