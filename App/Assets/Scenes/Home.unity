@@ -814,7 +814,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -822,8 +822,8 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Tap Button
 --- !u!222 &2132907013
@@ -843,14 +843,14 @@ RectTransform:
   m_GameObject: {fileID: 2132907011}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.12787968, y: 0.215943, z: 1}
   m_Children: []
   m_Father: {fileID: 393398859}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.2344, y: -96.666756}
+  m_AnchoredPosition: {x: 1.2344, y: -96.667}
   m_SizeDelta: {x: 170.7769, y: 46.1655}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &720024676614243791
@@ -1087,7 +1087,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f950ffca3e8c339419b61f83069f4eed, type: 3}
-
 --- !u!1001 &6588571338877878966
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1173,4 +1172,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f84ba9d005dfec4c9a454ad77848a3b, type: 3}
-
