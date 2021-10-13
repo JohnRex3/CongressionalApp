@@ -13,8 +13,8 @@ public class Settings1 : MonoBehaviour
     void Start()
     {
         //will's edit: praying this code should work.
-        PlayerPrefs.SetString("CBool", "false");
-        PlayerPrefs.SetString("DBool", "false");
+        PlayerPrefs.SetString("CBool", "true");
+        PlayerPrefs.SetString("DBool", "true");
         //will's edit: merge error fix
 
         CBtn = gameObject.GetComponent<Button>();

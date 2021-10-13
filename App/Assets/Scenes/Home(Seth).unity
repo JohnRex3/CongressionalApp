@@ -554,7 +554,12 @@ RectTransform:
   m_AnchoredPosition: {x: 99, y: 180}
   m_SizeDelta: {x: 198, y: 352}
   m_Pivot: {x: 0.5, y: 0.5}
+
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1532676492
+
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -562,6 +567,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+  - component: {fileID: 1436356117}
+  - component: {fileID: 1436356116}
+  m_Layer: 0
+  m_Name: GameObject
   - component: {fileID: 1532676494}
   - component: {fileID: 1532676493}
   m_Layer: 0
@@ -571,12 +580,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1436356116
+MonoBehaviour:
 --- !u!82 &1532676493
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436356115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ce2d900a6ffb80449e4f9c1b5392fa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CBtn: {fileID: 0}
+  DBtn: {fileID: 0}
+  btnPressed: {fileID: 0}
+--- !u!4 &1436356117
   m_GameObject: {fileID: 1532676492}
   m_Enabled: 1
   serializedVersion: 4
@@ -673,6 +694,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436356115}
   m_GameObject: {fileID: 1532676492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 99, y: 180, z: 0}
@@ -680,6 +702,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1745580617
 GameObject:
