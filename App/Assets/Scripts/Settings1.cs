@@ -13,8 +13,8 @@ public class Settings1 : MonoBehaviour
     void Start()
     {
         //will's edit: praying this code should work.
-        PlayerPrefs.SetString("CBool", "true");
-        PlayerPrefs.SetString("DBool", "true");
+        PlayerPrefs.GetString("CBool", "true");
+        PlayerPrefs.GetString("DBool", "true");
         //will's edit: merge error fix
 
         CBtn = gameObject.GetComponent<Button>();
@@ -30,11 +30,13 @@ public class Settings1 : MonoBehaviour
             if (PlayerPrefs.GetString("CBool") == "false")
             {
                 PlayerPrefs.SetString("CBool", "true");
+
             }
             else if (PlayerPrefs.GetString("CBool") == "true")
             {
                 PlayerPrefs.SetString("CBool", "true");
             }
+
         }
         else if (btnDown == DBtn)
         {
