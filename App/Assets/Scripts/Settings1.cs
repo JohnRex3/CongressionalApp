@@ -9,12 +9,16 @@ public class Settings1 : MonoBehaviour
     public Button CBtn;
     public Button DBtn;
     public GameObject btnPressed;
+    public string CBool;
+    public string DBool;
     // Start is called before the first frame update
     void Start()
     {
         //will's edit: praying this code should work.
-        PlayerPrefs.SetString("CBool", "true");
-        PlayerPrefs.SetString("DBool", "true");
+        PlayerPrefs.GetString("CBool");
+        PlayerPrefs.GetString("DBool");
+        CBool = PlayerPrefs.GetString("CBool");
+        DBool = PlayerPrefs.GetString("DBool");
         //will's edit: merge error fix
 
         CBtn = gameObject.GetComponent<Button>();
@@ -27,24 +31,29 @@ public class Settings1 : MonoBehaviour
     {
         if (btnDown == CBtn)
         {
-            if (PlayerPrefs.GetString("CBool") == "false")
+            if (CBool == "false")
             {
                 PlayerPrefs.SetString("CBool", "true");
+                Debug.Log("Cbool == true");
+                // set variable to these
+
             }
-            else if (PlayerPrefs.GetString("CBool") == "true")
+            else if (CBool == "true")
             {
-                PlayerPrefs.SetString("CBool", "true");
+                PlayerPrefs.SetString("CBool", "false");
+                Debug.Log("Cbool == false");
             }
+
         }
         else if (btnDown == DBtn)
         {
-            if (PlayerPrefs.GetString("DBool") == "false")
+            if (DBool == "false")
             {
                 PlayerPrefs.SetString("DBool", "true");
             }
-            else if (PlayerPrefs.GetString("DBool") == "true")
+            else if (DBool == "true")
             {
-                PlayerPrefs.SetString("DBool", "true");
+                PlayerPrefs.SetString("DBool", "false");
             }
         }
         PlayerPrefs.Save();

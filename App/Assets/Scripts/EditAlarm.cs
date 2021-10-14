@@ -16,14 +16,30 @@ public class EditAlarm : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-
+        //add code to add a playerprefs state to keep button on right script
+        //on = PlayerPrefs.GetInt("BtnState");
+        PlayerPrefs.GetString("BtnState");
         //Button btn = Switch.GetComponent<Button>();
         //btn.onClick.AddListener(swap);
+        if (PlayerPrefs.GetString("BtnState") == "on")
+        {
+            on = true;
+        }
+        else if (PlayerPrefs.GetString("BtnState") == "off")
+        {
+            on = false;
+
+
+        }
+
     }
 
     // Update is called once per frame
     void Update()
+    {
+        SwitchCol();
+    }
+    void SwitchCol ()
     {
         var mybutton = Switch;
         if (on == true)
@@ -36,8 +52,9 @@ public class EditAlarm : MonoBehaviour
             col.pressedColor = gr;
             col.selectedColor = gr;
             Switch.colors = col;
+            PlayerPrefs.SetString("BtnState", "on");
         }
-        else if(on == false)
+        else if (on == false)
         {
             Color gr = new Color(1f, 0f, 0f, 1f);
             words.text = "Off";
@@ -47,11 +64,14 @@ public class EditAlarm : MonoBehaviour
             col.pressedColor = gr;
             col.selectedColor = gr;
             Switch.colors = col;
-        }
-    }
+            PlayerPrefs.SetString("BtnState", "off");
 
+        }
+        PlayerPrefs.Save();
+    }
     public void swap()
     {
         on = !on;
+
     }
 }
