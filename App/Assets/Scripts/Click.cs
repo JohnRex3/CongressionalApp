@@ -17,7 +17,7 @@ public class Click : MonoBehaviour
     }
     public void LoadScene(string sceneName)
     {
-        float audioData = PlayerPrefs.GetFloat("MasterVolume");
+        //float audioData = PlayerPrefs.GetFloat("MasterVolume");
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(sceneName);
     }
