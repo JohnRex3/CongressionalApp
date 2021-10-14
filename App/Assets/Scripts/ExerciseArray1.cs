@@ -9,7 +9,7 @@ public class ExerciseArray1 : MonoBehaviour
     public Button ExerciseGen;
 
     // Will's Edit: made an array for calisthenic exercises.
-    public string[] exercisesCalisthenics = new string[] { "Pushups", "Squats", "Lunges", "Planks", "Stair Steps", "Burpees", "Wall Sits", "Crunches/ Situps", "Bicycle Kicks" };
+    public string[] exercisesCalisthenics = new string[] { "Pushups", "Squats", "Lunges", "Planks", "Stair Steps", "Burpees", "Wall Sits", "Situps/ Crunches", "Bicycle Kicks" };
     public string[] exercisesDumbells = new string[] { "Bicep Curls", "Hammer Curls", "Shrugs", "Lawnmowers", "Arnold/ Chest Presses", "Lateral Presses", "Shoulder Presses"};
     string[] exerciseCalisthenicsDumbells;
     public Text ExerciseText;
