@@ -11,11 +11,15 @@ public class ExerciseArray1 : MonoBehaviour
     // Will's Edit: made an array for calisthenic exercises.
     public string[] exercisesCalisthenics = new string[] { "Pushups", "Squats", "Lunges", "Planks", "Stair Steps", "Burpees", "Wall Sits", "Crunches/ Situps", "Bicycle Kicks" };
     public string[] exercisesDumbells = new string[] { "Bicep Curls", "Hammer Curls", "Shrugs", "Lawnmowers", "Arnold/ Chest Presses", "Lateral Presses", "Shoulder Presses"};
+    public string[] exercisesStretches = new string[] {"Calf Stretches", "Standing Hamstring Stretch", "Tricep Stretch", "Butterfly Stretch", "Knee to Chest stretch", "Quad Stretch" };
     string[] exerciseCalisthenicsDumbells;
     public Text ExerciseText;
     public bool exerciseCalisthenicsSetting; //Wills's Edit: Probably need a Setting script but these bools are here for a placeholder so i can write conditionals.
     public bool exerciseDumbellsSetting;
     public string Etext;
+    public string CBool;
+    public string DBool;
+    public string SBool;
     
 
     //public SetDifficulty MyScript;
@@ -23,7 +27,9 @@ public class ExerciseArray1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        CBool = PlayerPrefs.GetString("CBool");
+        DBool = PlayerPrefs.GetString("DBool");
+        SBool = PlayerPrefs.GetString("SBool");
         
     }
     public void OnClick()
@@ -49,25 +55,51 @@ public class ExerciseArray1 : MonoBehaviour
 
         //Will's Edit: generating random exercise
         //Will's Edit: Conditional statement that will work with settings to check which excercise list will be selected.
-        if (PlayerPrefs.GetString("CBool") == "true" && PlayerPrefs.GetString("DBool") == "false" )//exerciseCalisthenicsSetting == true && exerciseDumbellsSetting == false
+        if (PlayerPrefs.GetString("CBool") == "true" && PlayerPrefs.GetString("DBool") == "false" && SBool == "false")//exerciseCalisthenicsSetting == true && exerciseDumbellsSetting == false
         {
-             Etext = exercisesCalisthenics[UnityEngine.Random.Range(0, exercisesCalisthenics.Length)];
+            Etext = exercisesCalisthenics[UnityEngine.Random.Range(0, exercisesCalisthenics.Length)];
             Debug.Log("Cbool");
         }
-        else if (PlayerPrefs.GetString("CBool") == "false" && PlayerPrefs.GetString("DBool") == "true")//exerciseCalisthenicsSetting == false && exerciseDumbellsSetting == true)
+        else if (PlayerPrefs.GetString("CBool") == "false" && PlayerPrefs.GetString("DBool") == "true" && SBool == "false")//exerciseCalisthenicsSetting == false && exerciseDumbellsSetting == true)
         {
-             Etext = exercisesDumbells[UnityEngine.Random.Range(0, exercisesDumbells.Length)];
+            Etext = exercisesDumbells[UnityEngine.Random.Range(0, exercisesDumbells.Length)];
         }
-        else if (PlayerPrefs.GetString("CBool") == "true" && PlayerPrefs.GetString("DBool") == "true")   // exerciseCalisthenicsSetting == true && exerciseDumbellsSetting == true)
+        else if (CBool == "false" && DBool == "false" && SBool == "true")
+        {
+            Etext = exercisesStretches[UnityEngine.Random.Range(0, exercisesStretches.Length)];
+        }
+        else if (PlayerPrefs.GetString("CBool") == "true" && PlayerPrefs.GetString("DBool") == "true" && SBool == "false")   // exerciseCalisthenicsSetting == true && exerciseDumbellsSetting == true)
         {
             //Will's Edit: Adds 2 arrays together, makes it so that if the 1st or 2nd arrays change that this 3rd array is not baked in.
-            exerciseCalisthenicsDumbells = new string[exercisesCalisthenics.Length + exercisesDumbells.Length]; 
+            exerciseCalisthenicsDumbells = new string[exercisesCalisthenics.Length + exercisesDumbells.Length];
             Array.Copy(exercisesCalisthenics, exerciseCalisthenicsDumbells, exercisesCalisthenics.Length);
             Array.Copy(exercisesDumbells, 0, exerciseCalisthenicsDumbells, exercisesCalisthenics.Length, exercisesDumbells.Length);
             //Debug.Log(exerciseCalisthenicsDumbells); // unusable code
             Etext = exerciseCalisthenicsDumbells[UnityEngine.Random.Range(0, exerciseCalisthenicsDumbells.Length)];
         }
-        else if (PlayerPrefs.GetString("CBool") == "false" && PlayerPrefs.GetString("DBool") == "false")
+        else if(CBool == "true" && DBool == "false" && SBool == "true")
+        {
+            exerciseCalisthenicsDumbells = new string[exercisesDumbells.Length + exercisesStretches.Length];
+            Array.Copy(exercisesDumbells, exerciseCalisthenicsDumbells, exercisesDumbells.Length);
+            Array.Copy(exercisesStretches, 0, exerciseCalisthenicsDumbells, exercisesDumbells.Length, exercisesStretches.Length);
+            Etext = exerciseCalisthenicsDumbells[UnityEngine.Random.Range(0, exerciseCalisthenicsDumbells.Length)];
+        }
+        else if(CBool == "false" && DBool == "true" && SBool == "true")
+        {
+            exerciseCalisthenicsDumbells = new string[exercisesCalisthenics.Length + exercisesStretches.Length];
+            Array.Copy(exercisesCalisthenics, exerciseCalisthenicsDumbells, exercisesCalisthenics.Length);
+            Array.Copy(exercisesStretches, 0, exerciseCalisthenicsDumbells, exercisesCalisthenics.Length, exercisesStretches.Length);
+            Etext = exerciseCalisthenicsDumbells[UnityEngine.Random.Range(0, exerciseCalisthenicsDumbells.Length)];
+        }
+        /*/aelse if (CBool == "true" && DBool == "true" && SBool == "true")
+        {
+            exerciseCalisthenicsDumbells = new string[exercisesCalisthenics.Length + exercisesStretches.Length + exercisesDumbells.Length];
+            Array.Copy(exercisesCalisthenics, exerciseCalisthenicsDumbells, exercisesCalisthenics.Length);
+            Array.Copy(exercisesStretches, 0, exerciseCalisthenicsDumbells, exercisesCalisthenics.Length, exercisesStretches.Length);
+            Etext = exerciseCalisthenicsDumbells[UnityEngine.Random.Range(0, exerciseCalisthenicsDumbells.Length)];
+        }
+        /*/
+        else if (PlayerPrefs.GetString("CBool") == "false" && PlayerPrefs.GetString("DBool") == "false" && SBool == "false")
         {
             Etext = "Go to Settings to select Exercises";
         }
