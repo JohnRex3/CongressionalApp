@@ -8,18 +8,22 @@ public class Settings1 : MonoBehaviour
     //will's edit: trying to use a static variable not set to an instance of an object. this should hopefully make it a bit easier instead of dont destroyonload();
     public Button CBtn;
     public Button DBtn;
+    public Button SBtn;
     public GameObject btnPressed;
     public string CBool;
     public string DBool;
+    public string SBool;
     // Start is called before the first frame update
     void Start()
     {
         //will's edit: praying this code should work.
         PlayerPrefs.GetString("CBool");
         PlayerPrefs.GetString("DBool");
+        PlayerPrefs.GetString("SBool");
         CBool = PlayerPrefs.GetString("CBool");
         DBool = PlayerPrefs.GetString("DBool");
-        //will's edit: merge error fix
+        SBool = PlayerPrefs.GetString("SBool");
+            //will's edit: merge error fix
 
         CBtn = gameObject.GetComponent<Button>();
         DBtn = gameObject.GetComponent<Button>();
@@ -54,6 +58,17 @@ public class Settings1 : MonoBehaviour
             else if (DBool == "true")
             {
                 PlayerPrefs.SetString("DBool", "false");
+            }
+        }
+        else if (btnDown == SBtn)
+        {
+            if (SBool == "false")
+            {
+                PlayerPrefs.SetString("SBool", "true");
+            }
+            else if (SBool == "true")
+            {
+                PlayerPrefs.SetString("SBool", "false");
             }
         }
         PlayerPrefs.Save();
