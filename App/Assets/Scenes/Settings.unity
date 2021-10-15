@@ -526,7 +526,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   words: {fileID: 1350361538}
-  Switch: {fileID: 316839468}
+  CBtn: {fileID: 0}
+  DBtn: {fileID: 0}
+  SBtn: {fileID: 316839468}
 --- !u!114 &316839468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -821,7 +823,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   words: {fileID: 735123151}
-  Switch: {fileID: 443268090}
+  CBtn: {fileID: 443268090}
+  DBtn: {fileID: 0}
+  SBtn: {fileID: 0}
 --- !u!114 &443268090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1477,8 +1481,8 @@ GameObject:
   - component: {fileID: 935080713}
   - component: {fileID: 935080712}
   - component: {fileID: 935080711}
-  - component: {fileID: 935080715}
   - component: {fileID: 935080714}
+  - component: {fileID: 935080715}
   m_Layer: 5
   m_Name: Dum Button
   m_TagString: Untagged
@@ -1625,7 +1629,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   words: {fileID: 1680330787}
-  Switch: {fileID: 935080711}
+  CBtn: {fileID: 0}
+  DBtn: {fileID: 935080711}
+  SBtn: {fileID: 0}
 --- !u!114 &935080715
 MonoBehaviour:
   m_ObjectHideFlags: 0

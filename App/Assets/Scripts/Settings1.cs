@@ -27,8 +27,10 @@ public class Settings1 : MonoBehaviour
 
         CBtn = gameObject.GetComponent<Button>();
         DBtn = gameObject.GetComponent<Button>();
+        SBtn = gameObject.GetComponent<Button>();
         CBtn.onClick.AddListener(delegate { Toggle(CBtn); });
         DBtn.onClick.AddListener(delegate { Toggle(DBtn); });
+        SBtn.onClick.AddListener(delegate { Toggle(DBtn); });
     }
 
     void Toggle(Button btnDown)
@@ -38,14 +40,14 @@ public class Settings1 : MonoBehaviour
             if (CBool == "false")
             {
                 PlayerPrefs.SetString("CBool", "true");
-                Debug.Log("Cbool == true");
+
                 // set variable to these
 
             }
             else if (CBool == "true")
             {
                 PlayerPrefs.SetString("CBool", "false");
-                Debug.Log("Cbool == false");
+
             }
 
         }

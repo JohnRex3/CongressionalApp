@@ -58,7 +58,7 @@ public class ExerciseArray1 : MonoBehaviour
         if (PlayerPrefs.GetString("CBool") == "true" && PlayerPrefs.GetString("DBool") == "false" && SBool == "false")//exerciseCalisthenicsSetting == true && exerciseDumbellsSetting == false
         {
             Etext = exercisesCalisthenics[UnityEngine.Random.Range(0, exercisesCalisthenics.Length)];
-            Debug.Log("Cbool");
+     ;
         }
         else if (PlayerPrefs.GetString("CBool") == "false" && PlayerPrefs.GetString("DBool") == "true" && SBool == "false")//exerciseCalisthenicsSetting == false && exerciseDumbellsSetting == true)
         {
