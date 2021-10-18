@@ -509,7 +509,6 @@ MonoBehaviour:
   CBtn: {fileID: 0}
   DBtn: {fileID: 0}
   SBtn: {fileID: 316839468}
-  btnPressed: {fileID: 316839464}
   CBool: 
   DBool: 
   SBool: 
@@ -937,13 +936,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 443268087}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce2d900a6ffb80449e4f9c1b5392fa3, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c9795c94bd53404c847bc13f23df053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CBtn: {fileID: 443268090}
-  DBtn: {fileID: 0}
-  SBtn: {fileID: 0}
-  btnPressed: {fileID: 443268087}
+  SetBtn: {fileID: 443268090}
   CBool: 
   DBool: 
   SBool: 
@@ -1635,13 +1631,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 935080709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce2d900a6ffb80449e4f9c1b5392fa3, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c9795c94bd53404c847bc13f23df053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CBtn: {fileID: 0}
-  DBtn: {fileID: 935080711}
-  SBtn: {fileID: 0}
-  btnPressed: {fileID: 935080709}
+  SetBtn: {fileID: 935080711}
   CBool: 
   DBool: 
   SBool: 
