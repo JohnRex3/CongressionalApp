@@ -10,9 +10,12 @@ public class ExerciseArray1 : MonoBehaviour
 
     // Will's Edit: made an array for calisthenic exercises.
     public string[] exercisesCalisthenics = new string[] { "Pushups", "Squats", "Lunges", "Planks", "Stair Steps", "Burpees", "Wall Sits", "Situps/ Crunches", "Bicycle Kicks" };
-    public string[] exercisesDumbells = new string[] { "Bicep Curls", "Hammer Curls", "Shrugs", "Lawnmowers", "Arnold/ Chest Presses", "Lateral Presses", "Shoulder Presses"};
-    public string[] exercisesStretches = new string[] {"Calf Stretches", "Standing Hamstring Stretch", "Tricep Stretch", "Butterfly Stretch", "Knee to Chest stretch", "Quad Stretch" };
-    string[] exerciseCalisthenicsDumbells;
+    public string[] exercisesDumbells = new string[] { "Bicep Curls", "Hammer Curls", "Shrugs", "Lawnmowers", "Arnold/ Chest Presses", "Lateral Presses", "Shoulder Presses" };
+    public string[] exercisesStretches = new string[] { "Calf Stretches", "Standing Hamstring Stretch", "Tricep Stretch", "Butterfly Stretch", "Knee to Chest stretch", "Quad Stretch" };
+    string[] exerciseCalisthenicsStretches = new string[] { "Pushups", "Squats", "Lunges", "Planks", "Stair Steps", "Burpees", "Wall Sits", "Situps/ Crunches", "Bicycle Kicks", "Calf Stretches", "Standing Hamstring Stretch", "Tricep Stretch", "Butterfly Stretch", "Knee to Chest stretch", "Quad Stretch" };
+    string[] exerciseCalisthenicsDumbells = new string[] { "Pushups", "Squats", "Lunges", "Planks", "Stair Steps", "Burpees", "Wall Sits", "Situps/ Crunches", "Bicycle Kicks", "Bicep Curls", "Hammer Curls", "Shrugs", "Lawnmowers", "Arnold/ Chest Presses", "Lateral Presses", "Shoulder Presses" };
+    string[] exerciseDumbellStretches = new string[] { "Bicep Curls", "Hammer Curls", "Shrugs", "Lawnmowers", "Arnold/ Chest Presses", "Lateral Presses", "Shoulder Presses", "Calf Stretches", "Standing Hamstring Stretch", "Tricep Stretch", "Butterfly Stretch", "Knee to Chest stretch", "Quad Stretch" };
+    string[] exerciseAll = new string[] { "Calf Stretches", "Standing Hamstring Stretch", "Tricep Stretch", "Butterfly Stretch", "Knee to Chest stretch", "Quad Stretch", "Bicep Curls", "Hammer Curls", "Shrugs", "Lawnmowers", "Arnold/ Chest Presses", "Lateral Presses", "Shoulder Presses", "Pushups", "Squats", "Lunges", "Planks", "Stair Steps", "Burpees", "Wall Sits", "Situps/ Crunches", "Bicycle Kicks" };
     public Text ExerciseText;
     public bool exerciseCalisthenicsSetting; //Wills's Edit: Probably need a Setting script but these bools are here for a placeholder so i can write conditionals.
     public bool exerciseDumbellsSetting;
@@ -71,25 +74,22 @@ public class ExerciseArray1 : MonoBehaviour
         else if (PlayerPrefs.GetString("CBool") == "true" && PlayerPrefs.GetString("DBool") == "true" && SBool == "false")   // exerciseCalisthenicsSetting == true && exerciseDumbellsSetting == true)
         {
             //Will's Edit: Adds 2 arrays together, makes it so that if the 1st or 2nd arrays change that this 3rd array is not baked in.
-            exerciseCalisthenicsDumbells = new string[exercisesCalisthenics.Length + exercisesDumbells.Length];
-            Array.Copy(exercisesCalisthenics, exerciseCalisthenicsDumbells, exercisesCalisthenics.Length);
-            Array.Copy(exercisesDumbells, 0, exerciseCalisthenicsDumbells, exercisesCalisthenics.Length, exercisesDumbells.Length);
-            //Debug.Log(exerciseCalisthenicsDumbells); // unusable code
+
             Etext = exerciseCalisthenicsDumbells[UnityEngine.Random.Range(0, exerciseCalisthenicsDumbells.Length)];
         }
         else if(CBool == "true" && DBool == "false" && SBool == "true")
         {
-            exerciseCalisthenicsDumbells = new string[exercisesDumbells.Length + exercisesStretches.Length];
-            Array.Copy(exercisesDumbells, exerciseCalisthenicsDumbells, exercisesDumbells.Length);
-            Array.Copy(exercisesStretches, 0, exerciseCalisthenicsDumbells, exercisesDumbells.Length, exercisesStretches.Length);
-            Etext = exerciseCalisthenicsDumbells[UnityEngine.Random.Range(0, exerciseCalisthenicsDumbells.Length)];
+
+            Etext = exerciseCalisthenicsStretches[UnityEngine.Random.Range(0, exerciseCalisthenicsStretches.Length)];
         }
         else if(CBool == "false" && DBool == "true" && SBool == "true")
         {
-            exerciseCalisthenicsDumbells = new string[exercisesCalisthenics.Length + exercisesStretches.Length];
-            Array.Copy(exercisesCalisthenics, exerciseCalisthenicsDumbells, exercisesCalisthenics.Length);
-            Array.Copy(exercisesStretches, 0, exerciseCalisthenicsDumbells, exercisesCalisthenics.Length, exercisesStretches.Length);
-            Etext = exerciseCalisthenicsDumbells[UnityEngine.Random.Range(0, exerciseCalisthenicsDumbells.Length)];
+   
+            Etext = exerciseDumbellStretches[UnityEngine.Random.Range(0, exerciseDumbellStretches.Length)];
+        }
+        else if(CBool == "true" && DBool == "true" && SBool == "true")
+        {
+            Etext = exerciseAll[UnityEngine.Random.Range(0, exerciseAll.Length)];
         }
         /*/aelse if (CBool == "true" && DBool == "true" && SBool == "true")
         {

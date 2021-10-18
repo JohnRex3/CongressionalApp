@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class EditAlarm : MonoBehaviour
+public class EA2 : MonoBehaviour
 {
     public TMP_Text words;
 
@@ -18,14 +18,14 @@ public class EditAlarm : MonoBehaviour
     {
         //add code to add a playerprefs state to keep button on right script
         //on = PlayerPrefs.GetInt("BtnState");
-        PlayerPrefs.GetString("BtnState");
+        PlayerPrefs.GetString("BtnState2");
         //Button btn = Switch.GetComponent<Button>();
         //btn.onClick.AddListener(swap);
-        if (PlayerPrefs.GetString("BtnState") == "on")
+        if (PlayerPrefs.GetString("BtnState2") == "on")
         {
             on = true;
         }
-        else if (PlayerPrefs.GetString("BtnState") == "off")
+        else if (PlayerPrefs.GetString("BtnState2") == "off")
         {
             on = false;
 
@@ -52,7 +52,7 @@ public class EditAlarm : MonoBehaviour
             col.pressedColor = gr;
             col.selectedColor = gr;
             Switch.colors = col;
-            PlayerPrefs.SetString("BtnState", "on");
+            PlayerPrefs.SetString("BtnState2", "on");
         }
         else if (on == false)
         {
@@ -64,7 +64,7 @@ public class EditAlarm : MonoBehaviour
             col.pressedColor = gr;
             col.selectedColor = gr;
             Switch.colors = col;
-            PlayerPrefs.SetString("BtnState", "off");
+            PlayerPrefs.SetString("BtnState2", "off");
 
         }
         PlayerPrefs.Save();
