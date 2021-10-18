@@ -465,8 +465,8 @@ GameObject:
   - component: {fileID: 316839470}
   - component: {fileID: 316839469}
   - component: {fileID: 316839468}
-  - component: {fileID: 316839467}
   - component: {fileID: 316839466}
+  - component: {fileID: 316839467}
   m_Layer: 5
   m_Name: Str Button
   m_TagString: Untagged
@@ -503,15 +503,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 316839464}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce2d900a6ffb80449e4f9c1b5392fa3, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c9795c94bd53404c847bc13f23df053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CBtn: {fileID: 0}
-  DBtn: {fileID: 0}
-  SBtn: {fileID: 316839468}
+  SetBtn: {fileID: 316839468}
   CBool: 
   DBool: 
-  SBool: 
+  SBool: true
 --- !u!114 &316839467
 MonoBehaviour:
   m_ObjectHideFlags: 0

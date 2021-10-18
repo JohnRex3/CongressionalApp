@@ -28,14 +28,14 @@ public class Settings2 : MonoBehaviour
             if (CBool == "true")
             {
                 PlayerPrefs.SetString("CBool", "false");
-                Debug.Log("should be able to hear this");
+
                 // set variable to these
 
             }
             else if (CBool == "false")
             {
                 PlayerPrefs.SetString("CBool", "true");
-                Debug.Log("Hopefully");
+
             }
 
         }
@@ -45,12 +45,12 @@ public class Settings2 : MonoBehaviour
             if (DBool == "true")
             {
                 PlayerPrefs.SetString("DBool", "false");
-                Debug.Log("Am i being heard?");
+
             }
             else if (DBool == "false")
             {
                 PlayerPrefs.SetString("DBool", "true");
-                Debug.Log("Or not");
+
             }
         }
         else if (btnDown == "Str Button")
