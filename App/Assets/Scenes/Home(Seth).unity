@@ -246,7 +246,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 393398863}
-        m_TargetAssemblyTypeName: ExerciseArray1, Assembly-CSharp
+        m_TargetAssemblyTypeName: ExerciseArray2, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 393398858}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd6c025ec53354949b6d252e0ebc3105, type: 3}
+  m_Script: {fileID: 11500000, guid: 47b6e8da3dc18954e9624d21bce6b4cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ExerciseGen: {fileID: 393398862}
@@ -290,7 +290,7 @@ MonoBehaviour:
   - Stair Steps
   - Burpees
   - Wall Sits
-  - Crunches/ Situps
+  - Situps/ Crunches
   - Bicycle Kicks
   exercisesDumbells:
   - Bicep Curls
@@ -300,10 +300,20 @@ MonoBehaviour:
   - Arnold/ Chest Presses
   - Lateral Presses
   - Shoulder Presses
+  exercisesStretches:
+  - Calf Stretches
+  - Standing Hamstring Stretch
+  - Tricep Stretch
+  - Butterfly Stretch
+  - Knee to Chest stretch
+  - Quad Stretch
   ExerciseText: {fileID: 2132907012}
-  exerciseCalisthenicsSetting: 1
-  exerciseDumbellsSetting: 1
+  exerciseCalisthenicsSetting: 0
+  exerciseDumbellsSetting: 0
   Etext: 
+  CBool: 
+  DBool: 
+  SBool: 
 --- !u!1 &837600185
 GameObject:
   m_ObjectHideFlags: 0

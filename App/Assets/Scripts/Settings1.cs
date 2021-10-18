@@ -9,7 +9,6 @@ public class Settings1 : MonoBehaviour
     public Button CBtn;
     public Button DBtn;
     public Button SBtn;
-    public GameObject btnPressed;
     public string CBool;
     public string DBool;
     public string SBool;
@@ -30,47 +29,50 @@ public class Settings1 : MonoBehaviour
         SBtn = gameObject.GetComponent<Button>();
         CBtn.onClick.AddListener(delegate { Toggle(CBtn); });
         DBtn.onClick.AddListener(delegate { Toggle(DBtn); });
-        SBtn.onClick.AddListener(delegate { Toggle(DBtn); });
+        SBtn.onClick.AddListener(delegate { Toggle(SBtn); });
     }
 
     void Toggle(Button btnDown)
     {
         if (btnDown == CBtn)
         {
-            if (CBool == "false")
+            if (CBool == "true")
             {
-                PlayerPrefs.SetString("CBool", "true");
-
+                PlayerPrefs.SetString("CBool", "false");
+                Debug.Log("should be able to hear this");
                 // set variable to these
 
             }
-            else if (CBool == "true")
+            else if (CBool == "false")
             {
-                PlayerPrefs.SetString("CBool", "false");
-
+                PlayerPrefs.SetString("CBool", "true");
+                Debug.Log("Hopefully");
             }
 
         }
         else if (btnDown == DBtn)
         {
-            if (DBool == "false")
-            {
-                PlayerPrefs.SetString("DBool", "true");
-            }
-            else if (DBool == "true")
+            Debug.Log("btnDown not working?");
+            if (DBool == "true")
             {
                 PlayerPrefs.SetString("DBool", "false");
+                Debug.Log("Am i being heard?");
+            }
+            else if (DBool == "false")
+            {
+                PlayerPrefs.SetString("DBool", "true");
+                Debug.Log("Or not");
             }
         }
         else if (btnDown == SBtn)
         {
-            if (SBool == "false")
-            {
-                PlayerPrefs.SetString("SBool", "true");
-            }
-            else if (SBool == "true")
+            if (SBool == "true")
             {
                 PlayerPrefs.SetString("SBool", "false");
+            }
+            else if (SBool == "false")
+            {
+                PlayerPrefs.SetString("SBool", "true");
             }
         }
         PlayerPrefs.Save();
