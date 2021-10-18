@@ -58,21 +58,36 @@ public class ExerciseArray2 : MonoBehaviour
 
         //Will's Edit: generating random exercise
         //Will's Edit: Conditional statement that will work with settings to check which excercise list will be selected.
-        if (CBool == "true" && DBool == "false")//exerciseCalisthenicsSetting == true && exerciseDumbellsSetting == false
+        if (CBool == "true" && DBool == "false" && SBool =="false" )//exerciseCalisthenicsSetting == true && exerciseDumbellsSetting == false
         {
             ExerciseText.text = a +" "+ exercisesCalisthenics[UnityEngine.Random.Range(0, exercisesCalisthenics.Length)] ;
-            Debug.Log("Ct Df Sf");
+
         }
-        else if (CBool == "false" && DBool == "true")//exerciseCalisthenicsSetting == false && exerciseDumbellsSetting == true)
+        else if (CBool == "false" && DBool == "true" && SBool == "false" )//exerciseCalisthenicsSetting == false && exerciseDumbellsSetting == true)
         {
             ExerciseText.text = a + " " + exercisesDumbells[UnityEngine.Random.Range(0, exercisesDumbells.Length)];
-            Debug.Log("Cf Dt Sf");
-        }
-        else if (CBool == "true" && DBool == "true")
-        {
-            ExerciseText.text = a +" "+ exerciseCalisthenicsDumbells[UnityEngine.Random.Range(0, exerciseCalisthenicsDumbells.Length)];
-        }
 
+        }
+        else if (CBool == "false" && DBool == "false"&& SBool == "true"  )
+        {
+            ExerciseText.text = a +" "+ exercisesStretches[UnityEngine.Random.Range(0, exercisesStretches.Length)];
+        }
+        else if (CBool == "true" && DBool == "true" && SBool == "false" )
+        {
+            ExerciseText.text = a + " " + exerciseCalisthenicsDumbells[UnityEngine.Random.Range(0, exerciseCalisthenicsDumbells.Length)];
+        }
+        else if (CBool == "true" && DBool == "false" && SBool == "true")
+        {
+            ExerciseText.text = a + " " + exerciseCalisthenicsStretches[UnityEngine.Random.Range(0, exerciseCalisthenicsStretches.Length)];
+        }
+        else if (CBool == "false" && DBool == "true" && SBool == "true")
+        {
+            ExerciseText.text = a + " " + exerciseDumbellStretches[UnityEngine.Random.Range(0, exerciseDumbellStretches.Length)];
+        }
+        else if (CBool == "true" && DBool == "true" && SBool == "true")
+        {
+            ExerciseText.text = a + " " + exerciseAll[UnityEngine.Random.Range(0, exerciseAll.Length)];
+        }
         //int Amount = UnityEngine.Random.Range(10, 35);
         //amount = Amount.ToString;
         //Etext = ExerciseText.text;
