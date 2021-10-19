@@ -33,7 +33,6 @@ public class ExerciseArray2 : MonoBehaviour
         CBool = PlayerPrefs.GetString("CBool");
         DBool = PlayerPrefs.GetString("DBool");
         SBool = PlayerPrefs.GetString("SBool");
-
     }
     public void OnClick()
     {
