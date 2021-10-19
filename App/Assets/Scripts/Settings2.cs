@@ -41,7 +41,7 @@ public class Settings2 : MonoBehaviour
         }
         else if (btnDown == "Dum Button")
         {
-            Debug.Log("btnDown not working?");
+
             if (DBool == "true")
             {
                 PlayerPrefs.SetString("DBool", "false");
