@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ExerciseArray1 : MonoBehaviour
+public class ExerciseArray2 : MonoBehaviour
 {
     public Button ExerciseGen;
 
@@ -23,7 +23,7 @@ public class ExerciseArray1 : MonoBehaviour
     public string CBool;
     public string DBool;
     public string SBool;
-    
+
 
     //public SetDifficulty MyScript;
     public static int a;
@@ -33,7 +33,7 @@ public class ExerciseArray1 : MonoBehaviour
         CBool = PlayerPrefs.GetString("CBool");
         DBool = PlayerPrefs.GetString("DBool");
         SBool = PlayerPrefs.GetString("SBool");
-        
+
     }
     public void OnClick()
     {
@@ -58,63 +58,47 @@ public class ExerciseArray1 : MonoBehaviour
 
         //Will's Edit: generating random exercise
         //Will's Edit: Conditional statement that will work with settings to check which excercise list will be selected.
-        if (CBool == "true" && DBool == "false" && SBool == "false")//exerciseCalisthenicsSetting == true && exerciseDumbellsSetting == false
+        if (CBool == "true" && DBool == "false" && SBool =="false" )//exerciseCalisthenicsSetting == true && exerciseDumbellsSetting == false
         {
-            Etext = exercisesCalisthenics[UnityEngine.Random.Range(0, exercisesCalisthenics.Length)];
-            //Ct Df Sf
-        }
-        else if (CBool == "false" && DBool == "true" && SBool == "false")//exerciseCalisthenicsSetting == false && exerciseDumbellsSetting == true)
-        {
-            Etext = exercisesDumbells[UnityEngine.Random.Range(0, exercisesDumbells.Length)];
-            //Cf Dt Sf
-        }
-        else if (CBool == "false" && DBool == "false" && SBool == "true")
-        {
-            Etext = exercisesStretches[UnityEngine.Random.Range(0, exercisesStretches.Length)];
-        }
-        else if (CBool == "true" && DBool == "true" && SBool == "false")   // exerciseCalisthenicsSetting == true && exerciseDumbellsSetting == true)
-        {
-            //Will's Edit: Adds 2 arrays together, makes it so that if the 1st or 2nd arrays change that this 3rd array is not baked in.
+            ExerciseText.text = a +" "+ exercisesCalisthenics[UnityEngine.Random.Range(0, exercisesCalisthenics.Length)] ;
 
-            Etext = exerciseCalisthenicsDumbells[UnityEngine.Random.Range(0, exerciseCalisthenicsDumbells.Length)];
         }
-        else if(CBool == "true" && DBool == "false" && SBool == "true")
+        else if (CBool == "false" && DBool == "true" && SBool == "false" )//exerciseCalisthenicsSetting == false && exerciseDumbellsSetting == true)
         {
+            ExerciseText.text = a + " " + exercisesDumbells[UnityEngine.Random.Range(0, exercisesDumbells.Length)];
 
-            Etext = exerciseCalisthenicsStretches[UnityEngine.Random.Range(0, exerciseCalisthenicsStretches.Length)];
         }
-        else if(CBool == "false" && DBool == "true" && SBool == "true")
+        else if (CBool == "false" && DBool == "false"&& SBool == "true"  )
         {
-   
-            Etext = exerciseDumbellStretches[UnityEngine.Random.Range(0, exerciseDumbellStretches.Length)];
+            ExerciseText.text = a +" "+ exercisesStretches[UnityEngine.Random.Range(0, exercisesStretches.Length)];
         }
-        else if(CBool == "true" && DBool == "true" && SBool == "true")
+        else if (CBool == "true" && DBool == "true" && SBool == "false" )
         {
-            Etext = exerciseAll[UnityEngine.Random.Range(0, exerciseAll.Length)];
+            ExerciseText.text = a + " " + exerciseCalisthenicsDumbells[UnityEngine.Random.Range(0, exerciseCalisthenicsDumbells.Length)];
         }
-        /*/else if (CBool == "true" && DBool == "true" && SBool == "true")
+        else if (CBool == "true" && DBool == "false" && SBool == "true")
         {
-            exerciseCalisthenicsDumbells = new string[exercisesCalisthenics.Length + exercisesStretches.Length + exercisesDumbells.Length];
-            Array.Copy(exercisesCalisthenics, exerciseCalisthenicsDumbells, exercisesCalisthenics.Length);
-            Array.Copy(exercisesStretches, 0, exerciseCalisthenicsDumbells, exercisesCalisthenics.Length, exercisesStretches.Length);
-            Etext = exerciseCalisthenicsDumbells[UnityEngine.Random.Range(0, exerciseCalisthenicsDumbells.Length)];
+            ExerciseText.text = a + " " + exerciseCalisthenicsStretches[UnityEngine.Random.Range(0, exerciseCalisthenicsStretches.Length)];
         }
-        /*/
-        else if (PlayerPrefs.GetString("CBool") == "false" && PlayerPrefs.GetString("DBool") == "false" && SBool == "false")
+        else if (CBool == "false" && DBool == "true" && SBool == "true")
         {
-            Etext = "Go to Settings to select Exercises";
+            ExerciseText.text = a + " " + exerciseDumbellStretches[UnityEngine.Random.Range(0, exerciseDumbellStretches.Length)];
+        }
+        else if (CBool == "true" && DBool == "true" && SBool == "true")
+        {
+            ExerciseText.text = a + " " + exerciseAll[UnityEngine.Random.Range(0, exerciseAll.Length)];
         }
         //int Amount = UnityEngine.Random.Range(10, 35);
         //amount = Amount.ToString;
-        Etext = ExerciseText.text;
+        //Etext = ExerciseText.text;
         //ExerciseText.text = a + " " + Etext;
         PlayerPrefs.Save();
     }
     public string Notif()
     {
-        
 
-        
+
+
 
         string Etext = exercisesCalisthenics[UnityEngine.Random.Range(0, exercisesCalisthenics.Length)];
         ExerciseText.text = Etext;
@@ -122,13 +106,3 @@ public class ExerciseArray1 : MonoBehaviour
         //Debug.Log(a);
     }
 }
-
-//string exercise1 = "Pushups";
-//string exercise2 = "Squats";
-//string exercise3 = "Lunges";
-//string exercise4 = "Planks";
-//string exercise5 = "Stair Steps";
-//string exercise6 = "Burpees";
-//string exercise7 = "Wall Sits";
-//string exercise8 = "Crunches";
-//string exercise9 = "Bicycle Kicks";
