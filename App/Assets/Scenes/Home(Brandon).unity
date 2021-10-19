@@ -160,7 +160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 50}
+  m_AnchoredPosition: {x: -0.0014, y: 50}
   m_SizeDelta: {x: 150, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &393398860
@@ -1018,11 +1018,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-<<<<<<< HEAD
     m_VerticalOverflow: 1
-=======
-    m_VerticalOverflow: 0
->>>>>>> 0e1323b4a42a290291babef39f1a4de68f1302f9
     m_LineSpacing: 1
   m_Text: Tap Button
 --- !u!222 &2132907013
@@ -1049,13 +1045,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: 0.0000038146973, y: -96.667}
-  m_SizeDelta: {x: 749.0707, y: 46.1655}
-=======
-  m_AnchoredPosition: {x: -0.4241, y: -85}
-  m_SizeDelta: {x: 1293.4075, y: 500}
->>>>>>> 0e1323b4a42a290291babef39f1a4de68f1302f9
+  m_AnchoredPosition: {x: 0.9412, y: -77.98445}
+  m_SizeDelta: {x: 1282.3826, y: 419.8164}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &6588571338877878966
 PrefabInstance:
