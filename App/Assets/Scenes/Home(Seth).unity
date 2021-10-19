@@ -160,7 +160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 99, y: 220}
+  m_AnchoredPosition: {x: 2, y: 38}
   m_SizeDelta: {x: 198, y: 146.7885}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &393398860
@@ -308,8 +308,6 @@ MonoBehaviour:
   - Knee to Chest stretch
   - Quad Stretch
   ExerciseText: {fileID: 2132907012}
-  exerciseCalisthenicsSetting: 0
-  exerciseDumbellsSetting: 0
   Etext: 
   CBool: 
   DBool: 
@@ -627,8 +625,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 98.80125, y: 179.4665}
+  m_SizeDelta: {x: 197.8365, y: 351.7669}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1745580617
 GameObject:
@@ -909,11 +907,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 720024675027789255, guid: 6034ca7d1b780fc4194952a7eb8fcc15, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 136.2
+      value: 88.7
       objectReference: {fileID: 0}
     - target: {fileID: 720024675027789255, guid: 6034ca7d1b780fc4194952a7eb8fcc15, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 118.4
+      value: 68.8
       objectReference: {fileID: 0}
     - target: {fileID: 720024675027789255, guid: 6034ca7d1b780fc4194952a7eb8fcc15, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
