@@ -92,7 +92,7 @@ public class ExerciseArray1 : MonoBehaviour
         {
             Etext = exerciseAll[UnityEngine.Random.Range(0, exerciseAll.Length)];
         }
-        /*/aelse if (CBool == "true" && DBool == "true" && SBool == "true")
+        /*/else if (CBool == "true" && DBool == "true" && SBool == "true")
         {
             exerciseCalisthenicsDumbells = new string[exercisesCalisthenics.Length + exercisesStretches.Length + exercisesDumbells.Length];
             Array.Copy(exercisesCalisthenics, exerciseCalisthenicsDumbells, exercisesCalisthenics.Length);
