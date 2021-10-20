@@ -308,8 +308,6 @@ MonoBehaviour:
   - Knee to Chest stretch
   - Quad Stretch
   ExerciseText: {fileID: 2132907012}
-  exerciseCalisthenicsSetting: 0
-  exerciseDumbellsSetting: 0
   Etext: 
   CBool: 
   DBool: 
@@ -593,7 +591,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 2
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &1413581855
 Canvas:
   m_ObjectHideFlags: 0
@@ -603,7 +601,7 @@ Canvas:
   m_GameObject: {fileID: 1413581852}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 2
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -624,7 +622,7 @@ RectTransform:
   m_GameObject: {fileID: 1413581852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 393398859}
   - {fileID: 1241123419}
@@ -634,9 +632,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 97.90287, y: 173.99452}
+  m_SizeDelta: {x: 195.8058, y: 347.9892}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1532676492
 GameObject:
   m_ObjectHideFlags: 0
