@@ -17,8 +17,6 @@ public class ExerciseArray2 : MonoBehaviour
     string[] exerciseDumbellStretches = new string[] { "Bicep Curls", "Hammer Curls", "Shrugs", "Lawnmowers", "Arnold/ Chest Presses", "Lateral Presses", "Shoulder Presses", "Calf Stretches", "Standing Hamstring Stretch", "Tricep Stretch", "Butterfly Stretch", "Knee to Chest stretch", "Quad Stretch" };
     string[] exerciseAll = new string[] { "Calf Stretches", "Standing Hamstring Stretch", "Tricep Stretch", "Butterfly Stretch", "Knee to Chest stretch", "Quad Stretch", "Bicep Curls", "Hammer Curls", "Shrugs", "Lawnmowers", "Arnold/ Chest Presses", "Lateral Presses", "Shoulder Presses", "Pushups", "Squats", "Lunges", "Planks", "Stair Steps", "Burpees", "Wall Sits", "Situps/ Crunches", "Bicycle Kicks" };
     public Text ExerciseText;
-    public bool exerciseCalisthenicsSetting; //Wills's Edit: Probably need a Setting script but these bools are here for a placeholder so i can write conditionals.
-    public bool exerciseDumbellsSetting;
     public string Etext;
     public string CBool;
     public string DBool;
@@ -27,12 +25,39 @@ public class ExerciseArray2 : MonoBehaviour
 
     //public SetDifficulty MyScript;
     public static int a;
+
     // Start is called before the first frame update
     void Start()
     {
         CBool = PlayerPrefs.GetString("CBool");
         DBool = PlayerPrefs.GetString("DBool");
         SBool = PlayerPrefs.GetString("SBool");
+    }
+    int Difficulty()
+    {
+        //will's edit: this script assures only difficulty numbers can be evens aswell as generates the number.
+        a = 3;
+        int diff = PlayerPrefs.GetInt("Diff");
+        while (a % 2 != 0)
+        {
+            if (diff == 1)
+            {
+                a = UnityEngine.Random.Range(10, 25);
+            }
+            else if (diff == 2)
+            {
+                a = UnityEngine.Random.Range(20, 50);
+            }
+            else if (diff == 3)
+            {
+                a = UnityEngine.Random.Range(40, 100);
+            }
+            if(a % 2 == 0)
+            {
+                break;
+            }
+        }
+        return a;
     }
     public void OnClick()
     {
@@ -41,20 +66,7 @@ public class ExerciseArray2 : MonoBehaviour
         int diff = PlayerPrefs.GetInt("Diff");
 
         //MyScript.diff == 1 || 
-
-        if (diff == 1)
-        {
-            a = UnityEngine.Random.Range(10, 25);
-        }
-        else if (diff == 2)
-        {
-            a = UnityEngine.Random.Range(20, 50);
-        }
-        else if (diff == 3)
-        {
-            a = UnityEngine.Random.Range(40, 100);
-        }
-
+        Difficulty();
         //Will's Edit: generating random exercise
         //Will's Edit: Conditional statement that will work with settings to check which excercise list will be selected.
         if (CBool == "true" && DBool == "false" && SBool =="false" )//exerciseCalisthenicsSetting == true && exerciseDumbellsSetting == false
@@ -86,6 +98,10 @@ public class ExerciseArray2 : MonoBehaviour
         else if (CBool == "true" && DBool == "true" && SBool == "true")
         {
             ExerciseText.text = a + " " + exerciseAll[UnityEngine.Random.Range(0, exerciseAll.Length)];
+        }
+        else
+        {
+            ExerciseText.text = "Select excercises in settings";
         }
         //int Amount = UnityEngine.Random.Range(10, 35);
         //amount = Amount.ToString;
