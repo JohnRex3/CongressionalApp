@@ -17,8 +17,6 @@ public class ExerciseArray2 : MonoBehaviour
     string[] exerciseDumbellStretches = new string[] { "Bicep Curls", "Hammer Curls", "Shrugs", "Lawnmowers", "Arnold/ Chest Presses", "Lateral Presses", "Shoulder Presses", "Calf Stretches", "Standing Hamstring Stretch", "Tricep Stretch", "Butterfly Stretch", "Knee to Chest stretch", "Quad Stretch" };
     string[] exerciseAll = new string[] { "Calf Stretches", "Standing Hamstring Stretch", "Tricep Stretch", "Butterfly Stretch", "Knee to Chest stretch", "Quad Stretch", "Bicep Curls", "Hammer Curls", "Shrugs", "Lawnmowers", "Arnold/ Chest Presses", "Lateral Presses", "Shoulder Presses", "Pushups", "Squats", "Lunges", "Planks", "Stair Steps", "Burpees", "Wall Sits", "Situps/ Crunches", "Bicycle Kicks" };
     public Text ExerciseText;
-    public bool exerciseCalisthenicsSetting; //Wills's Edit: Probably need a Setting script but these bools are here for a placeholder so i can write conditionals.
-    public bool exerciseDumbellsSetting;
     public string Etext;
     public string CBool;
     public string DBool;
@@ -33,7 +31,6 @@ public class ExerciseArray2 : MonoBehaviour
         CBool = PlayerPrefs.GetString("CBool");
         DBool = PlayerPrefs.GetString("DBool");
         SBool = PlayerPrefs.GetString("SBool");
-
     }
     public void OnClick()
     {
@@ -87,6 +84,10 @@ public class ExerciseArray2 : MonoBehaviour
         else if (CBool == "true" && DBool == "true" && SBool == "true")
         {
             ExerciseText.text = a + " " + exerciseAll[UnityEngine.Random.Range(0, exerciseAll.Length)];
+        }
+        else
+        {
+            ExerciseText.text = "Select excercises in settings";
         }
         //int Amount = UnityEngine.Random.Range(10, 35);
         //amount = Amount.ToString;
