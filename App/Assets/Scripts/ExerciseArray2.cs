@@ -25,12 +25,39 @@ public class ExerciseArray2 : MonoBehaviour
 
     //public SetDifficulty MyScript;
     public static int a;
+
     // Start is called before the first frame update
     void Start()
     {
         CBool = PlayerPrefs.GetString("CBool");
         DBool = PlayerPrefs.GetString("DBool");
         SBool = PlayerPrefs.GetString("SBool");
+    }
+    int Difficulty()
+    {
+        //will's edit: this script assures only difficulty numbers can be evens aswell as generates the number.
+        a = 3;
+        int diff = PlayerPrefs.GetInt("Diff");
+        while (a % 2 != 0)
+        {
+            if (diff == 1)
+            {
+                a = UnityEngine.Random.Range(10, 25);
+            }
+            else if (diff == 2)
+            {
+                a = UnityEngine.Random.Range(20, 50);
+            }
+            else if (diff == 3)
+            {
+                a = UnityEngine.Random.Range(40, 100);
+            }
+            if(a % 2 == 0)
+            {
+                break;
+            }
+        }
+        return a;
     }
     public void OnClick()
     {
@@ -39,20 +66,7 @@ public class ExerciseArray2 : MonoBehaviour
         int diff = PlayerPrefs.GetInt("Diff");
 
         //MyScript.diff == 1 || 
-
-        if (diff == 1)
-        {
-            a = UnityEngine.Random.Range(10, 25);
-        }
-        else if (diff == 2)
-        {
-            a = UnityEngine.Random.Range(20, 50);
-        }
-        else if (diff == 3)
-        {
-            a = UnityEngine.Random.Range(40, 100);
-        }
-
+        Difficulty();
         //Will's Edit: generating random exercise
         //Will's Edit: Conditional statement that will work with settings to check which excercise list will be selected.
         if (CBool == "true" && DBool == "false" && SBool =="false" )//exerciseCalisthenicsSetting == true && exerciseDumbellsSetting == false
