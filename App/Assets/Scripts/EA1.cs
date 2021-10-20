@@ -16,6 +16,9 @@ public class EA1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetString("CBool", "false");
+        PlayerPrefs.SetString("DBool", "false");
+        PlayerPrefs.SetString("SBool", "false");
         //add code to add a playerprefs state to keep button on right script
         //on = PlayerPrefs.GetInt("BtnState");
         PlayerPrefs.GetString("BtnState1");
