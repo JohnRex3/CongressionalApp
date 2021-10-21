@@ -31,7 +31,7 @@ public class EA2 : MonoBehaviour
 
 
         }
-
+        PlayerPrefs.Save();
     }
 
     // Update is called once per frame
