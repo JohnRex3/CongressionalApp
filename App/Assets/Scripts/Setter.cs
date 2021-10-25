@@ -10,15 +10,15 @@ public class Setter : MonoBehaviour
         //PlayerPrefs.DeleteKey("CBool");
         //PlayerPrefs.DeleteKey("DBool");
         //PlayerPrefs.DeleteKey("SBool");
-        if (PlayerPrefs.HasKey("CBool") != true)
+        if (PlayerPrefs.HasKey("CBool") == true)
         {
             PlayerPrefs.SetString("CBool", "false");
         }
-        if (PlayerPrefs.HasKey("DBool") != true)
+        if (PlayerPrefs.HasKey("DBool") == true)
         {
             PlayerPrefs.SetString("DBool", "false");
         }
-        if (PlayerPrefs.HasKey("SBool") != true)
+        if (PlayerPrefs.HasKey("SBool") == true)
         {
             PlayerPrefs.SetString("SBool", "false");
         }

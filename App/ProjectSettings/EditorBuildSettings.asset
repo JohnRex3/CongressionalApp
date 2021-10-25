@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Alarms.unity
     guid: 130b0af1b757da0418efa4218ce8b621
+  - enabled: 1
+    path: Assets/Scenes/HomeTest.unity
+    guid: 5bab5458667874945b5d5718678945b1
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
