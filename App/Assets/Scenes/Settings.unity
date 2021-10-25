@@ -1081,7 +1081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d20792655cb72d4b8de6135a99255e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioData: {fileID: 0}
+  audioData: {fileID: 7098987174029693526, guid: 7f620d30ef62de94eb7d75f4535aad76, type: 3}
 --- !u!4 &511423400
 Transform:
   m_ObjectHideFlags: 0
@@ -2489,7 +2489,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1728240768}
   - component: {fileID: 1728240769}
-  - component: {fileID: 1728240770}
   m_Layer: 5
   m_Name: DifficultySlider
   m_TagString: Untagged
@@ -2570,20 +2569,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1728240770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1728240767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c1869b7dfa6fe743a365bb5c8b8a4e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  diff: 1
-  difficulty: {fileID: 1728240769}
 --- !u!1 &1780547754
 GameObject:
   m_ObjectHideFlags: 0
@@ -2814,4 +2799,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 931327ef3fb05aa41bbe93a63bb2f876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthBar: {fileID: 692377880}
+  slider: {fileID: 1728240769}
+  diff: 0
