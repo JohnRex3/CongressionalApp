@@ -15,9 +15,9 @@ public class Settings2 : MonoBehaviour
     {
         SetBtn = gameObject.GetComponent<Button>();
         SetBtn.onClick.AddListener(delegate { Toggle(EventSystem.current.currentSelectedGameObject.name); });
-        PlayerPrefs.SetString("CBool", "false");
-        PlayerPrefs.SetString("DBool", "false");
-        PlayerPrefs.SetString("SBool", "false");
+        //PlayerPrefs.SetString("CBool", "false");
+        //PlayerPrefs.SetString("DBool", "false");
+        //PlayerPrefs.SetString("SBool", "false");
         CBool = PlayerPrefs.GetString("CBool");
         DBool = PlayerPrefs.GetString("DBool");
         SBool = PlayerPrefs.GetString("SBool");
