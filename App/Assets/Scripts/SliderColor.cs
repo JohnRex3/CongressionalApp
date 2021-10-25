@@ -5,55 +5,31 @@ using UnityEngine.UI;
 
 public class SliderColor : MonoBehaviour
 {
-    public Image HealthBar;
+    public Slider slider;
 
-    float health, maxHealth = 100;
-    float lerpSpeed; 
+    public int diff;
+    Color c1 = new Color(1, 0.92f, 0.016f, 1);
+    Color c2 = new Color(1, 0, 0, 1);
 
 
-
-
-    // Start is called before the first frame update
     void Start()
     {
-        health = maxHealth;
+        int diff = PlayerPrefs.GetInt("Diff");
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        if (health > maxHealth) health = maxHealth;
-
-        HealthBarFiller();
-        ColorChanger();
-
-
-        lerpSpeed = 3f * Time.deltaTime;
+        //Debug.Log("update");
+        if (diff == 2)
+        {
+            slider.gameObject.transform.Find("Fill Area").Find("Fill").GetComponent<Image>().color = c1;
+            Debug.Log("c1");
+        }
+        if (diff == 3)
+        {
+            slider.gameObject.transform.Find("Fill Area").Find("Fill").GetComponent<Image>().color = c2;
+            Debug.Log("c2");
+        }
     }
 
-    void HealthBarFiller()
-    {
-        HealthBar.fillAmount = Mathf.Lerp(HealthBar.fillAmount, health/maxHealth, lerpSpeed);
-    }
-
-    void ColorChanger()
-    {
-        Color healthColor = Color.Lerp(Color.red, Color.green, (health / maxHealth));
-
-
-        HealthBar.color = healthColor;
-    }
-
-
-    public void Damage(float damagePoints)
-    {
-        if (health > 0)
-            health -= damagePoints;
-    }
-
-    public void Heal(float healingPoints)
-    {
-        if (health < maxHealth)
-            health += healingPoints; 
-    }
 }
