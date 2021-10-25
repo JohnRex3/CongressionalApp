@@ -466,7 +466,6 @@ GameObject:
   - component: {fileID: 316839469}
   - component: {fileID: 316839468}
   - component: {fileID: 316839466}
-  - component: {fileID: 316839467}
   m_Layer: 5
   m_Name: Str Button
   m_TagString: Untagged
@@ -503,26 +502,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 316839464}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c9795c94bd53404c847bc13f23df053, type: 3}
+  m_Script: {fileID: 11500000, guid: 26be16800d3fe5e4286303789f8b69bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SetBtn: {fileID: 316839468}
-  CBool: 
-  DBool: 
-  SBool: true
---- !u!114 &316839467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 316839464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae4b256a82710ed449832321b0950b15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  words: {fileID: 1350361538}
+  words: {fileID: 1332341152}
   Switch: {fileID: 316839468}
 --- !u!114 &316839468
 MonoBehaviour:
@@ -568,8 +551,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 316839467}
-        m_TargetAssemblyTypeName: EA3, Assembly-CSharp
+      - m_Target: {fileID: 316839466}
+        m_TargetAssemblyTypeName: EA6, Assembly-CSharp
         m_MethodName: swap
         m_Mode: 1
         m_Arguments:
@@ -775,9 +758,8 @@ GameObject:
   - component: {fileID: 443268088}
   - component: {fileID: 443268092}
   - component: {fileID: 443268091}
-  - component: {fileID: 443268090}
   - component: {fileID: 443268089}
-  - component: {fileID: 443268093}
+  - component: {fileID: 443268090}
   m_Layer: 0
   m_Name: Cal Button
   m_TagString: Alarm
@@ -814,10 +796,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 443268087}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2506202831e8014eb6c20dad9e86de6, type: 3}
+  m_Script: {fileID: 11500000, guid: c49f9472d5edc5c44b4c2743fd29a3cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  words: {fileID: 735123151}
+  words: {fileID: 1780547756}
   Switch: {fileID: 443268090}
 --- !u!114 &443268090
 MonoBehaviour:
@@ -864,7 +846,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 443268089}
-        m_TargetAssemblyTypeName: EA1, Assembly-CSharp
+        m_TargetAssemblyTypeName: EA4, Assembly-CSharp
         m_MethodName: swap
         m_Mode: 1
         m_Arguments:
@@ -925,22 +907,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443268087}
   m_CullTransparentMesh: 1
---- !u!114 &443268093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 443268087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c9795c94bd53404c847bc13f23df053, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SetBtn: {fileID: 443268090}
-  CBool: 
-  DBool: 
-  SBool: 
 --- !u!1 &453883299
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,7 +1464,6 @@ GameObject:
   - component: {fileID: 935080712}
   - component: {fileID: 935080711}
   - component: {fileID: 935080714}
-  - component: {fileID: 935080715}
   m_Layer: 5
   m_Name: Dum Button
   m_TagString: Untagged
@@ -1571,7 +1536,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 935080714}
-        m_TargetAssemblyTypeName: EA2, Assembly-CSharp
+        m_TargetAssemblyTypeName: EA5, Assembly-CSharp
         m_MethodName: swap
         m_Mode: 1
         m_Arguments:
@@ -1641,27 +1606,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 935080709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04efdc0f63368134a97bd8bbdceda247, type: 3}
+  m_Script: {fileID: 11500000, guid: 00946ecde0324ef479b634105f5e744b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  words: {fileID: 1680330787}
+  words: {fileID: 366333715}
   Switch: {fileID: 935080711}
---- !u!114 &935080715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 935080709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c9795c94bd53404c847bc13f23df053, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SetBtn: {fileID: 935080711}
-  CBool: 
-  DBool: 
-  SBool: 
 --- !u!1 &952329803 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7098987174029693527, guid: 7f620d30ef62de94eb7d75f4535aad76, type: 3}
