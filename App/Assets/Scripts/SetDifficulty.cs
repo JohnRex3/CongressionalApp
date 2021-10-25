@@ -24,16 +24,19 @@ public class SetDifficulty : MonoBehaviour
         if (diff == 1)
         {
             PlayerPrefs.SetInt("Diff",1);
+            //Debug.Log(diff);
             //Debug.Log("1");
         }
         else if(diff == 2)
         {
             PlayerPrefs.SetInt("Diff", 2);
+            //Debug.Log(diff);
             //Debug.Log("2");
         }
         else if(diff == 3)
         {
             PlayerPrefs.SetInt("Diff", 3);
+            //Debug.Log(diff);
             //Debug.Log("3");
         }
 

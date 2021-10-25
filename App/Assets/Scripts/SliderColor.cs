@@ -19,16 +19,18 @@ public class SliderColor : MonoBehaviour
     
     void Update()
     {
+        int diff = PlayerPrefs.GetInt("Diff");
+        //Debug.Log(diff);
         //Debug.Log("update");
         if (diff == 2)
         {
             slider.gameObject.transform.Find("Fill Area").Find("Fill").GetComponent<Image>().color = c1;
-            Debug.Log("c1");
+            //Debug.Log("c1");
         }
         if (diff == 3)
         {
             slider.gameObject.transform.Find("Fill Area").Find("Fill").GetComponent<Image>().color = c2;
-            Debug.Log("c2");
+            //Debug.Log("c2");
         }
     }
 

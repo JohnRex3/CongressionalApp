@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Home(Seth).unity
     guid: 4a743788406237d48908a3348c1750ad
+  - enabled: 1
+    path: Assets/Scenes/HomeTest.unity
+    guid: 5bab5458667874945b5d5718678945b1
   m_configObjects: {}
