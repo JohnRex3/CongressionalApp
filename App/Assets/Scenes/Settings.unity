@@ -404,11 +404,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7098987174029693525, guid: 7f620d30ef62de94eb7d75f4535aad76, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 99
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7098987174029693525, guid: 7f620d30ef62de94eb7d75f4535aad76, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7098987174029693525, guid: 7f620d30ef62de94eb7d75f4535aad76, type: 3}
       propertyPath: m_LocalPosition.z
@@ -465,8 +465,8 @@ GameObject:
   - component: {fileID: 316839470}
   - component: {fileID: 316839469}
   - component: {fileID: 316839468}
-  - component: {fileID: 316839466}
   - component: {fileID: 316839467}
+  - component: {fileID: 316839466}
   m_Layer: 5
   m_Name: Str Button
   m_TagString: Untagged
@@ -509,7 +509,7 @@ MonoBehaviour:
   SetBtn: {fileID: 316839468}
   CBool: 
   DBool: 
-  SBool: true
+  SBool: 
 --- !u!114 &316839467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,7 +519,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 316839464}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae4b256a82710ed449832321b0950b15, type: 3}
+  m_Script: {fileID: 11500000, guid: 26be16800d3fe5e4286303789f8b69bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   words: {fileID: 1350361538}
@@ -569,7 +569,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 316839467}
-        m_TargetAssemblyTypeName: EA3, Assembly-CSharp
+        m_TargetAssemblyTypeName: EA6, Assembly-CSharp
         m_MethodName: swap
         m_Mode: 1
         m_Arguments:
@@ -580,13 +580,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 952329803}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 182925491}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -777,7 +777,6 @@ GameObject:
   - component: {fileID: 443268091}
   - component: {fileID: 443268090}
   - component: {fileID: 443268089}
-  - component: {fileID: 443268093}
   m_Layer: 0
   m_Name: Cal Button
   m_TagString: Alarm
@@ -814,7 +813,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 443268087}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2506202831e8014eb6c20dad9e86de6, type: 3}
+  m_Script: {fileID: 11500000, guid: c49f9472d5edc5c44b4c2743fd29a3cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   words: {fileID: 735123151}
@@ -864,7 +863,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 443268089}
-        m_TargetAssemblyTypeName: EA1, Assembly-CSharp
+        m_TargetAssemblyTypeName: EA4, Assembly-CSharp
         m_MethodName: swap
         m_Mode: 1
         m_Arguments:
@@ -925,22 +924,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443268087}
   m_CullTransparentMesh: 1
---- !u!114 &443268093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 443268087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c9795c94bd53404c847bc13f23df053, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SetBtn: {fileID: 443268090}
-  CBool: 
-  DBool: 
-  SBool: 
 --- !u!1 &453883299
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,7 +989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d20792655cb72d4b8de6135a99255e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioData: {fileID: 0}
+  audioData: {fileID: 7098987174029693526, guid: 7f620d30ef62de94eb7d75f4535aad76, type: 3}
 --- !u!4 &511423400
 Transform:
   m_ObjectHideFlags: 0
@@ -1032,6 +1015,8 @@ GameObject:
   - component: {fileID: 518525544}
   - component: {fileID: 518525547}
   - component: {fileID: 518525546}
+  - component: {fileID: 518525550}
+  - component: {fileID: 518525548}
   - component: {fileID: 518525545}
   - component: {fileID: 518525549}
   m_Layer: 5
@@ -1155,6 +1140,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 518525543}
   m_CullTransparentMesh: 1
+--- !u!114 &518525548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518525543}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8858176dc0293f3429b936e42a97aaf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &518525549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1168,6 +1165,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioData: {fileID: 182925491}
+--- !u!114 &518525550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518525543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1bb370afd8a974cb5c5e365110a544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &692377878
 GameObject:
   m_ObjectHideFlags: 0
@@ -1545,7 +1554,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 935080714}
-        m_TargetAssemblyTypeName: EA2, Assembly-CSharp
+        m_TargetAssemblyTypeName: EA5, Assembly-CSharp
         m_MethodName: swap
         m_Mode: 1
         m_Arguments:
@@ -1615,7 +1624,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 935080709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04efdc0f63368134a97bd8bbdceda247, type: 3}
+  m_Script: {fileID: 11500000, guid: 00946ecde0324ef479b634105f5e744b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   words: {fileID: 1680330787}
@@ -1636,11 +1645,6 @@ MonoBehaviour:
   CBool: 
   DBool: 
   SBool: 
---- !u!1 &952329803 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7098987174029693527, guid: 7f620d30ef62de94eb7d75f4535aad76, type: 3}
-  m_PrefabInstance: {fileID: 182925490}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1306395675
 GameObject:
   m_ObjectHideFlags: 0
@@ -2506,7 +2510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c1869b7dfa6fe743a365bb5c8b8a4e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diff: 1
+  diff: 0
   difficulty: {fileID: 1728240769}
 --- !u!1 &1780547754
 GameObject:
@@ -2738,4 +2742,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 931327ef3fb05aa41bbe93a63bb2f876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthBar: {fileID: 692377880}
+  slider: {fileID: 1728240769}
+  diff: 0

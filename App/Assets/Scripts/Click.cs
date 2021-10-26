@@ -11,7 +11,7 @@ public class Click : MonoBehaviour
     private void Awake()
     {
         //audioData = GetComponent<AudioSource>();
-        audioData.PlayDelayed(0);
+        audioData.Play(0);
         //GameObject[] objs = GameObject.FindGameObjectsWithTag("Saved");
         //DontDestroyOnLoad(this.gameObject);
     }

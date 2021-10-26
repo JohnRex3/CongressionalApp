@@ -29,9 +29,7 @@ public class ExerciseArray2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CBool = PlayerPrefs.GetString("CBool");
-        DBool = PlayerPrefs.GetString("DBool");
-        SBool = PlayerPrefs.GetString("SBool");
+
     }
     int Difficulty()
     {
@@ -61,6 +59,9 @@ public class ExerciseArray2 : MonoBehaviour
     }
     public void OnClick()
     {
+        CBool = PlayerPrefs.GetString("CBool");
+        DBool = PlayerPrefs.GetString("DBool");
+        SBool = PlayerPrefs.GetString("SBool");
         //Seth's Edit: adding imput from difficulty slider
         //var MyScript = GameObject.Find("DifficultySlider").GetComponent<SetDifficulty>();
         int diff = PlayerPrefs.GetInt("Diff");
