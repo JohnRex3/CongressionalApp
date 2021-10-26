@@ -519,7 +519,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 316839464}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae4b256a82710ed449832321b0950b15, type: 3}
   m_Script: {fileID: 11500000, guid: 26be16800d3fe5e4286303789f8b69bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -569,7 +568,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 316839466}
+      - m_Target: {fileID: 316839467}
         m_TargetAssemblyTypeName: EA6, Assembly-CSharp
         m_MethodName: swap
         m_Mode: 1
@@ -776,8 +775,8 @@ GameObject:
   - component: {fileID: 443268088}
   - component: {fileID: 443268092}
   - component: {fileID: 443268091}
-  - component: {fileID: 443268089}
   - component: {fileID: 443268090}
+  - component: {fileID: 443268089}
   m_Layer: 0
   m_Name: Cal Button
   m_TagString: Alarm
@@ -1482,6 +1481,7 @@ GameObject:
   - component: {fileID: 935080712}
   - component: {fileID: 935080711}
   - component: {fileID: 935080714}
+  - component: {fileID: 935080715}
   m_Layer: 5
   m_Name: Dum Button
   m_TagString: Untagged
@@ -1645,11 +1645,6 @@ MonoBehaviour:
   CBool: 
   DBool: 
   SBool: 
---- !u!1 &952329803 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7098987174029693527, guid: 7f620d30ef62de94eb7d75f4535aad76, type: 3}
-  m_PrefabInstance: {fileID: 182925490}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1306395675
 GameObject:
   m_ObjectHideFlags: 0
